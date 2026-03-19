@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirsti K. Cole, PhD — Rhetoric, Pedagogy, and Institutional Change</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beenie&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/neue-machina" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --mint-100: #e8faf5;
+  --mint-300: #a8f0d8;
+  --mint-500: #4dd9b0;
+  --teal: #0fa89a;
+  --teal-deep: #0d7a70;
+  --cobalt: #1a5fb4;
+  --cobalt-deep: #0e3d7a;
+  --cream: #f8faf9;
+  --white: #ffffff;
+  --off: #f0f4f2;
+  --ink: #141e1c;
+  --ink-mid: #3a4a48;
+  --ink-light: #7a8f8c;
+  --rule: #d4e8e2;
+  --display: 'Neue Machina', 'DM Sans', sans-serif;
+  --hand: 'Reenie Beenie', cursive;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(248,250,249,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3rem; height: 52px;
+}
+
+.nav-name {
+  font-family: var(--display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+  text-decoration: none;
+}
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+
+.nav-links a {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--teal); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  padding: 7rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* top color bar */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--mint-500), var(--teal), var(--cobalt));
+}
+
+.hero-left {
+  padding: 0 4rem 0 3rem;
+  position: relative; z-index: 1;
+}
+
+.hero-eyebrow {
+  font-family: var(--hand);
+  font-size: 1.5rem;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-name {
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.hero-name span { color: var(--teal); }
+
+.hero-tagline {
+  font-family: var(--hand);
+  font-size: 1.5rem;
+  color: var(--cobalt);
+  line-height: 1.45;
+  max-width: 500px;
+  margin-top: 1.25rem;
+}
+
+.hero-meta {
+  margin-top: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-light);
+  letter-spacing: 0.04em;
+  line-height: 1.9;
+  border-left: 3px solid var(--mint-300);
+  padding-left: 1rem;
+}
+
+.hero-meta strong { color: var(--ink-mid); font-weight: 500; }
+
+.hero-cta {
+  margin-top: 2rem;
+  display: flex; gap: 0.75rem; flex-wrap: wrap;
+}
+
+.btn-teal {
+  background: var(--teal);
+  color: #fff;
+  font-family: var(--display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.75rem;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid var(--teal);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn-teal:hover { background: var(--teal-deep); border-color: var(--teal-deep); transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--cobalt-deep);
+  font-family: var(--display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.75rem;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid var(--cobalt);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn-outline:hover { background: var(--cobalt); color: #fff; transform: translateY(-1px); }
+
+.hero-tags {
+  margin-top: 2rem;
+  display: flex; flex-wrap: wrap; gap: 0.4rem;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  background: var(--mint-100);
+  border: 1px solid var(--mint-500);
+  color: var(--teal-deep);
+}
+
+.hero-right {
+  padding: 0 3rem 0 1rem;
+  position: relative; z-index: 1;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  max-width: 420px;
+}
+
+.hero-photo-wrap::before {
+  content: '';
+  position: absolute;
+  top: -12px; left: -12px;
+  right: 12px; bottom: 12px;
+  border: 2px solid var(--mint-300);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-photo-wrap img {
+  width: 100%; display: block;
+  position: relative; z-index: 1;
+  filter: saturate(0.9) contrast(1.05);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-top: 1.25rem;
+  max-width: 420px;
+}
+
+.hero-stat {
+  background: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+/* ── SHARED ── */
+section { padding: 6rem 3rem; }
+.container { max-width: 1160px; margin: 0 auto; }
+
+.section-header {
+  display: flex; align-items: baseline; gap: 1.25rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--rule);
+}
+
+.section-num {
+  font-family: var(--display);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--mint-300);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.section-title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.section-intro {
+  font-family: var(--hand);
+  font-size: 1.4rem;
+  color: var(--cobalt);
+  line-height: 1.5;
+  max-width: 680px;
+  margin-bottom: 3rem;
+}
+
+/* ── ABOUT ── */
+.about-section { background: var(--white); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.about-lead {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.about-lead span { color: var(--teal); }
+
+.about-body {
+  font-size: 0.975rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  line-height: 1.9;
+}
+
+.about-pull {
+  font-family: var(--hand);
+  font-size: 1.4rem;
+  color: var(--cobalt);
+  line-height: 1.5;
+  border-left: 3px solid var(--mint-500);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+}
+
+.sidebar-block {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.sidebar-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.sidebar-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.6rem;
+}
+
+.sidebar-value {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  line-height: 1.75;
+}
+
+.sidebar-value a {
+  color: var(--cobalt);
+  text-decoration: none;
+  border-bottom: 1px solid var(--mint-300);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.sidebar-value a:hover { color: var(--teal-deep); border-color: var(--teal); }
+
+.edu-item { margin-bottom: 0.6rem; }
+.edu-deg { font-weight: 500; font-size: 0.85rem; color: var(--ink); }
+.edu-inst { font-size: 0.78rem; color: var(--ink-light); }
+
+.award-block {
+  background: var(--mint-100);
+  border-left: 3px solid var(--mint-500);
+  padding: 0.875rem 1rem;
+  font-size: 0.85rem;
+  color: var(--teal-deep);
+}
+
+.award-block strong { font-weight: 500; display: block; }
+
+/* ── RESEARCH ── */
+.research-section { background: var(--cream); }
+
+.research-areas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 4rem;
+}
+
+.research-card {
+  background: var(--white);
+  padding: 2.25rem;
+  transition: background 0.2s;
+}
+
+.research-card:hover { background: var(--mint-100); }
+
+.rc-num {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--teal);
+  margin-bottom: 0.6rem;
+}
+
+.rc-title {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.rc-body {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.rc-recent {
+  border-top: 1px solid var(--rule);
+  padding-top: 0.875rem;
+}
+
+.rc-recent-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 0.5rem;
+}
+
+.rc-recent ul { list-style: none; }
+
+.rc-recent li {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  padding: 0.2rem 0 0.2rem 1rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.rc-recent li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-size: 0.65rem;
+  top: 0.28rem;
+}
+
+.pubs-divider {
+  font-family: var(--display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex; align-items: center; gap: 0.75rem;
+}
+
+.pubs-divider::before {
+  content: '';
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--teal);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+
+.book-tile {
+  background: var(--white);
+  padding: 1.5rem;
+  border-top: 3px solid var(--mint-500);
+  transition: background 0.2s;
+}
+
+.book-tile:nth-child(even) { border-top-color: var(--cobalt); }
+.book-tile:hover { background: var(--mint-100); }
+.book-tile a { text-decoration: none; color: inherit; display: block; }
+
+.bt-year {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--teal);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.bt-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+
+.bt-pub {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--ink-light);
+  line-height: 1.4;
+}
+
+.articles-list { list-style: none; }
+
+.article-item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  line-height: 1.65;
+}
+
+.article-yr {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.article-item em { font-style: italic; color: var(--ink); }
+
+.forthcoming {
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--teal);
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── TEACHING ── */
+.teaching-section { background: var(--teal-deep); color: #fff; }
+.teaching-section .section-header { border-bottom-color: rgba(255,255,255,0.15); }
+.teaching-section .section-num { color: rgba(168,240,216,0.4); }
+.teaching-section .section-title { color: #fff; }
+.teaching-section .section-intro { color: var(--mint-300); }
+
+.teaching-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-bottom: 4rem;
+}
+
+.teaching-body {
+  font-size: 0.975rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.9;
+}
+
+.teaching-pull {
+  font-family: var(--hand);
+  font-size: 1.4rem;
+  color: var(--mint-300);
+  line-height: 1.5;
+  border-left: 3px solid var(--mint-500);
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.teaching-link {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mint-300);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(168,240,216,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+
+.teaching-link:hover { border-color: var(--mint-300); }
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 4rem;
+}
+
+.course-card {
+  background: rgba(255,255,255,0.03);
+  padding: 1.5rem;
+  transition: background 0.2s;
+}
+
+.course-card:hover { background: rgba(255,255,255,0.07); }
+
+.cc-code {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--mint-500);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.cc-name {
+  font-family: var(--display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+}
+
+.cc-desc {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+}
+
+.highlights-row {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.hl-num {
+  font-family: var(--display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--mint-500);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
+}
+
+.hl-text {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.55;
+}
+
+/* ── CONSULTING ── */
+.consulting-section { background: var(--white); }
+
+.consulting-intro {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  max-width: 680px;
+  margin-bottom: 3rem;
+  line-height: 1.9;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin-bottom: 4rem;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 1.75rem 1.5rem;
+  transition: background 0.2s;
+}
+
+.service-card:nth-child(odd):hover { background: var(--mint-100); }
+.service-card:nth-child(even):hover { background: #eef3fb; }
+
+.svc-mark {
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--rule);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.svc-name {
+  font-family: var(--display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--teal-deep);
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+
+.svc-desc {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 1.65;
+}
+
+.partnerships-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.partner-tile {
+  background: var(--white);
+  padding: 2.5rem;
+}
+
+.partner-tile:nth-child(1) { border-top: 3px solid var(--teal); }
+.partner-tile:nth-child(2) { border-top: 3px solid var(--cobalt); }
+
+.pt-tag {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--teal);
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.partner-tile:nth-child(2) .pt-tag { background: var(--cobalt); }
+
+.pt-name {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.pt-collab {
+  font-family: var(--hand);
+  font-size: 1.1rem;
+  color: var(--cobalt);
+  margin-bottom: 1rem;
+}
+
+.pt-body {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+.pt-list { list-style: none; }
+
+.pt-list li {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--ink-mid);
+  padding: 0.3rem 0 0.3rem 1.1rem;
+  position: relative;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.pt-list li:last-child { border-bottom: none; }
+
+.pt-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-size: 0.65rem;
+  top: 0.38rem;
+}
+
+/* ── CONTACT ── */
+.contact-section {
+  background: var(--teal-deep);
+  padding: 7rem 3rem;
+}
+
+.contact-section .section-header { border-bottom-color: rgba(255,255,255,0.15); }
+.contact-section .section-num { color: rgba(168,240,216,0.3); }
+.contact-section .section-title { color: #fff; }
+
+.contact-tagline {
+  font-family: var(--hand);
+  font-size: 1.75rem;
+  color: var(--mint-300);
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.contact-tile {
+  background: rgba(255,255,255,0.04);
+  padding: 2rem 1.5rem;
+  text-decoration: none;
+  color: var(--white);
+  display: block;
+  transition: background 0.2s;
+}
+
+.contact-tile:hover { background: rgba(255,255,255,0.1); }
+
+.ct-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mint-500);
+  margin-bottom: 0.4rem;
+}
+
+.ct-value {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--cobalt-deep);
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-name {
+  font-family: var(--display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mint-300);
+}
+
+.footer-right {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.05em;
+}
+
+.footer-right a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+.footer-right a:hover { color: var(--mint-300); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .books-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .highlights-row { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 5.5rem 1.5rem 4rem; }
+  .hero-right { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .research-areas { grid-template-columns: 1fr; }
+  .teaching-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .partnerships-grid { grid-template-columns: 1fr; }
+  section { padding: 4rem 1.5rem; }
+  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .courses-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .books-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .highlights-row { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-name">Kirsti K. Cole</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#consulting">Consulting</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Professor of English · NC State University</div>
+    <div class="hero-name">KIRSTI K.<br><span>COLE</span></div>
+    <div class="hero-tagline">Bridging Institutional Literacy, Feminist Pedagogy, and AI Ethics in Writing and Speaking</div>
+    <div class="hero-meta">
+      <strong>Co-Director</strong>, Campus Writing and Speaking Program<br>
+      <strong>Professor</strong>, Department of English<br>
+      North Carolina State University · Raleigh, NC
+    </div>
+    <div class="hero-cta">
+      <a href="#research" class="btn-teal">Research &amp; Publications</a>
+      <a href="https://www.kirstikcole.com/s/Cole-CV-2025docx.pdf" target="_blank" class="btn-outline">Download CV</a>
+    </div>
+    <div class="hero-tags">
+      <span class="tag">Rhetoric &amp; Composition</span>
+      <span class="tag">Feminist Pedagogy</span>
+      <span class="tag">AI Ethics</span>
+      <span class="tag">WAC / WID</span>
+      <span class="tag">Institutional Change</span>
+      <span class="tag">Multimodal Composition</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <img src="https://images.squarespace-cdn.com/content/v1/6839c27fc7887568c4249111/32aba34d-47f6-465b-b90e-acfd4c1f6e2b/K+Headshot.jpg" alt="Dr. Kirsti K. Cole">
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years in the field</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Books &amp; collections</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Students mentored</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">01</div>
+      <div class="section-title">About</div>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p class="about-lead">Professor of English, editor, and writing program leader committed to <span>transforming how we teach, research, and value communication</span> in higher education.</p>
+        <div class="about-body">
+          <p>With over 20 years of experience in rhetoric and composition, feminist theory, and program administration, my work bridges theory and practice across institutional, disciplinary, and technological boundaries.</p>
+          <p>I serve as Professor of English and Co-Director of the Campus Writing and Speaking Program (CWSP) at North Carolina State University, where I collaborate with faculty across disciplines to develop writing-enriched curricula, facilitate communication-enriched pedagogies, and co-lead campus-wide initiatives on ethical and inclusive writing and speaking instruction. I specialize in faculty development emphasizing WAC, WID, and institutional literacy.</p>
+          <p>My scholarship spans institutional ethnography, the ethics of AI integration in writing, and alternative rhetorics of motherhood through a feminist lens. I am one of the co-authors of the AWAC Statement on Artificial Intelligence Writing Tools (2025) and an invited member of the AI and Research Working Group at the Modern Language Association (2025–).</p>
+          <p>Whether in the classroom, through research, or in institutional leadership, my work centers on creating sustainable, collaborative, and inclusive futures for writing and communication.</p>
+        </div>
+        <div class="about-pull">Students are not just learners, but co-creators of knowledge.</div>
+      </div>
+      <div>
+        <div class="sidebar-block">
+          <div class="sidebar-label">Current Position</div>
+          <div class="sidebar-value">
+            Professor of English &amp; Co-Director<br>
+            Campus Writing and Speaking Program<br>
+            <a href="https://chass.ncsu.edu/people/kkcole2/" target="_blank">NC State University</a>
+            <span style="display:block; color:var(--ink-light); font-size:0.78rem; margin-top:0.2rem;">2023–present</span>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <div class="sidebar-label">Education</div>
+          <div class="sidebar-value">
+            <div class="edu-item"><div class="edu-deg">PhD, English</div><div class="edu-inst">Rhetoric, Composition &amp; Literature · Arizona State University, 2008</div></div>
+            <div class="edu-item" style="margin-top:0.6rem"><div class="edu-deg">Graduate Certificate</div><div class="edu-inst">Medical Writing &amp; Editing · University of Chicago, 2021</div></div>
+            <div class="edu-item" style="margin-top:0.6rem"><div class="edu-deg">Graduate Certificate</div><div class="edu-inst">Gender and Women's Studies · Arizona State University, 2008</div></div>
+            <div class="edu-item" style="margin-top:0.6rem"><div class="edu-deg">BA, English <em style="font-weight:300">magna cum laude</em></div><div class="edu-inst">University of Montana, 2001</div></div>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <div class="award-block">
+            <strong>AWAC 2024 Exemplary Enduring WAC Program</strong>
+            Campus Writing and Speaking Program, NC State University
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <div class="sidebar-label">Office Hours</div>
+          <div class="sidebar-value"><a href="https://calendar.app.google/jJxfNenMUunjbBXy8" target="_blank">Book an appointment →</a></div>
+        </div>
+        <div class="sidebar-block">
+          <div class="sidebar-label">Contact</div>
+          <div class="sidebar-value"><a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="research-section" id="research">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">02</div>
+      <div class="section-title">Research</div>
+    </div>
+    <p class="section-intro">Composing Change: Institutional Ethnography, Feminist Inquiry, and Digital Futures</p>
+
+    <div class="research-areas">
+      <div class="research-card">
+        <div class="rc-num">Area 01</div>
+        <div class="rc-title">Program Administration &amp; Institutional Ethnography</div>
+        <div class="rc-body">Research in WAC/WID/WEC focuses on how institutions define, support, and assess writing across disciplines. I use institutional ethnography and rhetorical analysis to trace the often-invisible labor behind curriculum design, policy decisions, and faculty development.</div>
+        <div class="rc-recent">
+          <div class="rc-recent-label">Recent Work</div>
+          <ul>
+            <li>Invited Keynote, Write@UGA Conference, February 2026</li>
+            <li>"The Labor of Strategic Translation," <em>CCC</em> forthcoming 2026</li>
+            <li>AWAC 2024 Exemplary Enduring WAC Program Award</li>
+          </ul>
+        </div>
+      </div>
+      <div class="research-card">
+        <div class="rc-num">Area 02</div>
+        <div class="rc-title">Feminist Rhetorics &amp; Alternative Motherhood</div>
+        <div class="rc-body">My feminist rhetorical scholarship investigates how motherhood — particularly non-normative and stepmother identities — is represented in political discourse, media, and cultural narratives, and how feminist theory can inform institutional practice and leadership.</div>
+        <div class="rc-recent">
+          <div class="rc-recent-label">Recent Work</div>
+          <ul>
+            <li>"Discursive Archetypes: Kamala Harris and Repositioning Stepmotherhood," <em>Peitho</em> forthcoming</li>
+            <li><em>Refiguring Motherhood Beyond Biology</em> (Routledge, 2023)</li>
+            <li>Invited roundtable, IAMAS 2024, Boston University</li>
+          </ul>
+        </div>
+      </div>
+      <div class="research-card">
+        <div class="rc-num">Area 03</div>
+        <div class="rc-title">AI and Digital Writing Pedagogies</div>
+        <div class="rc-body">This line of research interrogates the impact of generative AI on writing processes, authorship, assessment, and faculty labor. I examine how large language models shape rhetorical decision-making and propose ethical frameworks for integration into pedagogy.</div>
+        <div class="rc-recent">
+          <div class="rc-recent-label">Recent Work</div>
+          <ul>
+            <li>Co-author, AWAC Statement on AI Writing Tools in WAC Settings (2025)</li>
+            <li>Guest Editor with Chris Anson, <em>JOWR</em> 17.3 (2026)</li>
+            <li>MLA AI and Research Working Group (2025–)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="research-card">
+        <div class="rc-num">Area 04</div>
+        <div class="rc-title">Multimodal Composition and Equity</div>
+        <div class="rc-body">My research in multimodal composition explores how students compose across genres, platforms, and modalities, collaborating across disciplines to design inclusive pedagogies that recognize linguistic diversity, digital access, and student positionality.</div>
+        <div class="rc-recent">
+          <div class="rc-recent-label">Recent Work</div>
+          <ul>
+            <li><em>Reimagining Graduate Education in Writing Studies</em> (Routledge, 2026)</li>
+            <li>"Reflective Multimodal Feedback Practices," TextGenEd (2025)</li>
+            <li><em>Professionalizing Multimodal Composition</em>, USUP (2023)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubs-divider">Books &amp; Edited Collections</div>
+    <div class="books-grid">
+      <div class="book-tile"><a href="https://www.routledge.com/Reimagining-Graduate-Education-in-Writing-Studies-Sustainable-Equitab/Cole-Henderson-Lee/p/book/9781041134695" target="_blank"><div class="bt-year">2026</div><div class="bt-title">Reimagining Graduate Education in Writing Studies</div><div class="bt-pub">Routledge · with Sarah Henderson Lee</div></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/A-Faculty-Guidebook-for-Effective-Shared-Governance-and-Service-in-Higher-Education/Cole-Giordano-Hassel/p/book/9781032191706" target="_blank"><div class="bt-year">2023</div><div class="bt-title">A Faculty Guidebook for Effective Shared Governance and Service in Higher Education</div><div class="bt-pub">Routledge · with Holly Hassel &amp; Joanne Giordano</div></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/Refiguring-Motherhood-Beyond-Biology/Renegar-Cole/p/book/9781032318660" target="_blank"><div class="bt-year">2023</div><div class="bt-title">Refiguring Motherhood Beyond Biology</div><div class="bt-pub">Routledge · with Valerie Renegar</div></a></div>
+      <div class="book-tile"><a href="https://upcolorado.com/utah-state-university-press/item/4064-transformations" target="_blank"><div class="bt-year">2021</div><div class="bt-title">Transformations: Change Work Across Writing Programs, Pedagogies, and Practices</div><div class="bt-pub">Utah State UP · with Holly Hassel</div></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/Academic-Labor-Beyond-the-College-Classroom-Working-for-Our-Values/Hassel-Cole/p/book/9780367313227" target="_blank"><div class="bt-year">2019</div><div class="bt-title">Academic Labor Beyond the Classroom: Working for our Values</div><div class="bt-pub">Routledge · with Holly Hassel</div></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/Surviving-Sexism-in-Academia-Strategies-for-Feminist-Leadership/Cole-Hassel/p/book/9781138696846" target="_blank"><div class="bt-year">2017</div><div class="bt-title">Surviving Sexism in Academia: Strategies for Feminist Leadership</div><div class="bt-pub">Routledge · with Holly Hassel</div></a></div>
+      <div class="book-tile"><a href="https://www.cambridgescholars.com/product/978-1-4438-5501-3" target="_blank"><div class="bt-year">2014</div><div class="bt-title">Feminist Challenges or Feminist Rhetorics?: Locations, Scholarship, and Discourse</div><div class="bt-pub">Cambridge Scholars Press</div></a></div>
+    </div>
+
+    <div class="pubs-divider">Selected Articles &amp; Chapters</div>
+    <ul class="articles-list">
+      <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Anson. "The Labor of Strategic Translation: Writing Programs and the Politics of Institutional Language." <em>College Composition and Communication</em>.<span class="forthcoming">forthcoming</span></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Cole, Hassel, et al. "Strategic Friction: Writing and Literacy Programs and the Acceleration Imperative." <em>CCC</em>.<span class="forthcoming">forthcoming</span></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Renegar. "Discursive Archetypes: Kamala Harris and Repositioning Stepmotherhood." <em>Peitho</em>.<span class="forthcoming">forthcoming</span></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Schwartzman &amp; Cole. "A Modest Futurist Manifesto for Reimagining Communication Centers in a Critical AI Landscape." <em>Communication Center Journal</em> 11(1).</span></li>
+      <li class="article-item"><span class="article-yr">2025</span><span>Cole, Van Scooter, et al. "Reflective Multimodal Feedback Practices in Human and AI Writing Contexts." <em>TextGenEd Continuing Experiments</em>.</span></li>
+      <li class="article-item"><span class="article-yr">2025</span><span>Anson &amp; Cole. "Writing With AI Requires Human Rhetorical Agency." In <em>Bad Ideas about AI and Writing</em>. WAC Clearinghouse.</span></li>
+      <li class="article-item"><span class="article-yr">2024</span><span>Cole &amp; Wagner. "Crisis Pregnancy Centers: Digital Rhetoric, Misinformation, and Trust." In <em>Trust under Threat</em>. Waxmann Verlag.</span></li>
+      <li class="article-item"><span class="article-yr">2019</span><span>Renegar &amp; Cole. "'Evil is Part of the Territory': Inventing the Stepmother in Self-Help Books." <em>Women's Studies in Communication</em>.</span></li>
+      <li class="article-item"><span class="article-yr">2019</span><span>Bivens, Cole &amp; Hellig. "The Activist Syllabus as Technical Communication." <em>Technical Communication Quarterly</em>.</span></li>
+      <li class="article-item"><span class="article-yr">2015</span><span>Cole. "'It's Like She's Eager to be Verbally Abused:' Twitter, Trolls, and (En)gendering Disciplinary Rhetoric." <em>Feminist Media Studies</em> 15.2.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section class="teaching-section" id="teaching">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">03</div>
+      <div class="section-title">Teaching</div>
+    </div>
+    <p class="section-intro">Pedagogy Grounded in Practice, Equity, and Rhetorical Agility</p>
+
+    <div class="teaching-grid">
+      <div>
+        <div class="teaching-pull">Students are not just learners, but co-creators of knowledge.</div>
+        <div class="teaching-body">
+          <p>I teach with the conviction that writing is never neutral — it shapes who we are, how we are perceived, and how we navigate the world. Across undergraduate and graduate levels, I design courses that foreground rhetorical awareness, student agency, and the social dimensions of writing.</p>
+          <p style="margin-top:1rem">My teaching is grounded in feminist, inclusive, and antiracist pedagogies that equip students to engage critically and creatively with their academic, civic, and professional communities. I integrate multimodal composition, digital tools, and AI literacy into my curriculum, emphasizing ethical use and critical reflection.</p>
+          <p style="margin-top:1rem">I also invest deeply in mentoring graduate instructors and future faculty, modeling collaborative curriculum design and sustained pedagogical inquiry.</p>
+          <p style="margin-top:1.5rem"><a href="https://www.kirstikcole.com/s/Cole-TP-2025.pdf" target="_blank" class="teaching-link">Read full teaching philosophy →</a></p>
+        </div>
+      </div>
+      <div>
+        <div class="courses-grid">
+          <div class="course-card"><div class="cc-code">ENG 511</div><div class="cc-name">Theory and Research in Composition</div><div class="cc-desc">Foundational approaches to composition theory, pedagogical methods, and programmatic implications.</div></div>
+          <div class="course-card"><div class="cc-code">ENG 583</div><div class="cc-name">Multimodal Composition in Practice</div><div class="cc-desc">Integrates multimodal theory, critical design, inclusive assessment, and ethical GenAI integration.</div></div>
+          <div class="course-card"><div class="cc-code">CRDM 704</div><div class="cc-name">Pedagogy &amp; Communication Technologies</div><div class="cc-desc">Pedagogical theory, digital literacies, and critical approaches to GenAI and multimodal design.</div></div>
+          <div class="course-card"><div class="cc-code">Seminar</div><div class="cc-name">Rhetoric &amp; Composition Theory</div><div class="cc-desc">Key debates and methodologies preparing students to teach, design, and assess writing.</div></div>
+          <div class="course-card"><div class="cc-code">Topics</div><div class="cc-name">Gender and Public Discourse</div><div class="cc-desc">How gender and power circulate through media, institutions, and everyday rhetorics.</div></div>
+          <div class="course-card"><div class="cc-code">Topics</div><div class="cc-name">Feminist Rhetorics &amp; Digital Media</div><div class="cc-desc">Analyzing and producing feminist discourse online, with attention to embodiment and activism.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlights-row">
+      <div><div class="hl-num">20+</div><div class="hl-text">Years teaching rhetoric, composition, and feminist theory at graduate and undergraduate levels</div></div>
+      <div><div class="hl-num">30+</div><div class="hl-text">MA and PhD students mentored in composition, rhetoric, and digital writing</div></div>
+      <div><div class="hl-num">2</div><div class="hl-text">University-wide WAC programs directed, including the AWAC 2024 Award-winning CWSP at NC State</div></div>
+      <div><div class="hl-num">WEC</div><div class="hl-text">Writing-enriched curriculum initiatives co-led across NC State, embedding outcomes into disciplines</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTING -->
+<section class="consulting-section" id="consulting">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">04</div>
+      <div class="section-title">Consulting</div>
+    </div>
+    <p class="consulting-intro">I partner with faculty, departments, writing programs, and institutional leaders to co-develop responsive, research-driven communication strategies that foster equity, effectiveness, and sustainability. Through hands-on workshops, institutional partnerships, and project-based consulting, I help individuals and organizations design initiatives that are rhetorically sound, evidence-based, and truly transformative.</p>
+
+    <div class="services-grid">
+      <div class="service-card"><div class="svc-mark">✎</div><div class="svc-name">WAC / WEC Curriculum Design</div><div class="svc-desc">Facilitating department- and program-level curriculum integration using inclusive, discipline-specific approaches to writing and speaking.</div></div>
+      <div class="service-card"><div class="svc-mark">◈</div><div class="svc-name">Ethical GenAI &amp; AI Literacy</div><div class="svc-desc">Guiding ethical, equitable, and accessible approaches to generative AI in classrooms, writing centers, and institutional policy.</div></div>
+      <div class="service-card"><div class="svc-mark">◎</div><div class="svc-name">Faculty Development</div><div class="svc-desc">Designing workshops, retreats, and asynchronous modules that support sustained, reflective communication instruction.</div></div>
+      <div class="service-card"><div class="svc-mark">▦</div><div class="svc-name">Institutional Research &amp; Visual Storytelling</div><div class="svc-desc">Translating data into narrative through institutional ethnography and visual reporting for program review, grants, and redesign.</div></div>
+      <div class="service-card"><div class="svc-mark">◇</div><div class="svc-name">Feminist Leadership &amp; Governance</div><div class="svc-desc">Supporting leadership grounded in feminist ethics, transparency, and shared responsibility, tailored to departments and administrators.</div></div>
+    </div>
+
+    <div class="partnerships-grid">
+      <div class="partner-tile">
+        <div class="pt-tag">Partnership</div>
+        <div class="pt-name">Real Shared Governance</div>
+        <div class="pt-collab">With Dr. Holly Hassel</div>
+        <p class="pt-body">Faculty-driven consulting for institutional change. We help departments and academic leaders implement effective shared governance structures that reflect the realities of faculty labor, institutional policy, and disciplinary expertise.</p>
+        <ul class="pt-list">
+          <li>Shared governance audits and redesign</li>
+          <li>Chair and committee training sessions</li>
+          <li>Faculty mentoring programs for emerging leaders</li>
+          <li>Strategic visioning retreats for departments or cross-campus units</li>
+        </ul>
+      </div>
+      <div class="partner-tile">
+        <div class="pt-tag">Partnership</div>
+        <div class="pt-name">Rhetorica Editing</div>
+        <div class="pt-collab">With Dr. Kristin Bivens</div>
+        <p class="pt-body">Ethical editing for medical, technical, and scientific communication. Our editorial approach combines rhetorical precision with linguistic clarity, ensuring research communicates across scholarly, clinical, and public spheres.</p>
+        <ul class="pt-list">
+          <li>Manuscript review and revision for publication</li>
+          <li>Translational editing for interdisciplinary and public audiences</li>
+          <li>Grant proposal editing and feedback</li>
+          <li>Ethics and style review for health communication texts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-num">05</div>
+      <div class="section-title">Contact</div>
+    </div>
+    <div class="contact-tagline">Let's work together.</div>
+    <div class="contact-grid">
+      <a href="mailto:kkcole2@ncsu.edu" class="contact-tile"><div class="ct-label">Email</div><div class="ct-value">kkcole2@ncsu.edu</div></a>
+      <a href="https://calendar.app.google/jJxfNenMUunjbBXy8" target="_blank" class="contact-tile"><div class="ct-label">Office Hours</div><div class="ct-value">Book an appointment →</div></a>
+      <a href="https://chass.ncsu.edu/people/kkcole2/" target="_blank" class="contact-tile"><div class="ct-label">NC State Profile</div><div class="ct-value">CHASS Faculty Page →</div></a>
+      <a href="https://www.kirstikcole.com/s/Cole-CV-2025docx.pdf" target="_blank" class="contact-tile"><div class="ct-label">Curriculum Vitae</div><div class="ct-value">Download PDF →</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Kirsti K. Cole, PhD</div>
+  <div class="footer-right">NC State University · Raleigh, NC · <a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a></div>
+</footer>
+
+</body>
+</html>
