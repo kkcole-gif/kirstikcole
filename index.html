@@ -671,7 +671,7 @@ section { padding: 6rem 3rem; }
 }
 .partnerships-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1px;
   background: var(--rule);
   border: 1px solid var(--rule);
@@ -682,6 +682,7 @@ section { padding: 6rem 3rem; }
 }
 .partner-tile:nth-child(1) { border-top: 3px solid var(--teal); }
 .partner-tile:nth-child(2) { border-top: 3px solid var(--cobalt); }
+.partner-tile:nth-child(3) { border-top: 3px solid var(--mint-500); }
 .pt-tag {
   font-family: var(--mono);
   font-size: 0.58rem;
@@ -695,6 +696,7 @@ section { padding: 6rem 3rem; }
   margin-bottom: 0.75rem;
 }
 .partner-tile:nth-child(2) .pt-tag { background: var(--cobalt); }
+.partner-tile:nth-child(3) .pt-tag { background: var(--teal-deep); }
 .pt-name {
   font-family: var(--display);
   font-size: 1.5rem;
@@ -954,7 +956,7 @@ footer {
   .research-card.full-width { grid-column: auto; grid-template-columns: 1fr; }
   .teaching-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .services-grid { grid-template-columns: 1fr 1fr; }
-  .partnerships-grid { grid-template-columns: 1fr; }
+  .partnerships-grid { grid-template-columns: 1fr 1fr; }
   section { padding: 4rem 1.5rem; }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
@@ -1001,8 +1003,7 @@ footer {
     <div class="hero-meta">
       <strong>Co-Director</strong>, Campus Writing and Speaking Program<br>
       <strong>Professor</strong>, Department of English<br>
-      North Carolina State University · Raleigh, NC<br>
-      <a href="https://cwspwolf.com/" target="_blank" style="color:var(--teal); border-bottom:1px solid var(--mint-300); text-decoration:none;">WOLF Faculty Development Program →</a>
+      North Carolina State University · Raleigh, NC
     </div>
     <div class="hero-cta">
       <a href="#research" class="btn-teal">Research &amp; Publications</a>
@@ -1328,6 +1329,19 @@ footer {
           <li>Chair and committee training sessions</li>
           <li>Faculty mentoring programs for emerging leaders</li>
           <li>Strategic visioning retreats for departments or cross-campus units</li>
+        </ul>
+      </div>
+      <div class="partner-tile">
+        <div class="pt-tag">Program</div>
+        <div class="pt-name">CWSP WOLF</div>
+        <div class="pt-collab">With Dr. Roy Schwartzman · NC State University</div>
+        <p class="pt-body">WOLF — Written and Oral Literacy Facilitation — is CWSP's faculty development program, pairing faculty with trained liaisons to audit communication practices, design scaffolded assignments, and build evidence of student learning. The program runs in three phases and adapts to any discipline, from first-year writing to capstone courses.</p>
+        <ul class="pt-list">
+          <li>Faculty liaison partnerships for course and assignment redesign</li>
+          <li>Department-level communication curriculum audits</li>
+          <li>RED-ACI certificate program — written, digital, and oral tracks</li>
+          <li>AI Policy Lab workshop facilitation</li>
+          <li><a href="https://cwspwolf.com/" target="_blank" style="color:var(--teal-deep); text-decoration:none; border-bottom:1px solid var(--mint-300);">Visit cwspwolf.com →</a></li>
         </ul>
       </div>
       <div class="partner-tile">
