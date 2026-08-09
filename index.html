@@ -808,58 +808,6 @@ footer {
 }
 .footer-right a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
 .footer-right a:hover { color: var(--mint-300); }
-/* ── SIDE DOT NAV ── */
-.side-nav {
-  position: fixed;
-  right: 1.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 300;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  align-items: flex-end;
-}
-.side-nav-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  cursor: pointer;
-  text-decoration: none;
-}
-.side-nav-label {
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-light);
-  opacity: 0;
-  transform: translateX(6px);
-  transition: opacity 0.2s, transform 0.2s;
-  white-space: nowrap;
-  background: var(--white);
-  padding: 0.2rem 0.5rem;
-  border: 1px solid var(--rule);
-}
-.side-nav-item:hover .side-nav-label { opacity: 1; transform: translateX(0); }
-.side-nav-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--rule);
-  border: 2px solid var(--ink-light);
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
-  flex-shrink: 0;
-}
-.side-nav-item.active .side-nav-dot {
-  background: var(--teal);
-  border-color: var(--teal);
-  transform: scale(1.3);
-}
-.side-nav-item:hover .side-nav-dot {
-  background: var(--mint-300);
-  border-color: var(--teal);
-}
 /* ── HAMBURGER ── */
 .nav-hamburger {
   display: none;
@@ -948,7 +896,6 @@ footer {
   nav { padding: 0 1.5rem; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
-  .side-nav { display: none; }
   .hero { grid-template-columns: 1fr; padding: 5.5rem 1.5rem 4rem; }
   .hero-right { display: none; }
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1384,34 +1331,6 @@ footer {
   <div class="footer-name">Kirsti K. Cole, PhD</div>
   <div class="footer-right">NC State University · Raleigh, NC · <a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a></div>
 </footer>
-<!-- SIDE DOT NAV -->
-<nav class="side-nav" aria-label="Section navigation">
-  <a href="#home" class="side-nav-item" data-section="home">
-    <span class="side-nav-label">Home</span>
-    <span class="side-nav-dot"></span>
-  </a>
-  <a href="#about" class="side-nav-item" data-section="about">
-    <span class="side-nav-label">About</span>
-    <span class="side-nav-dot"></span>
-  </a>
-  <a href="#research" class="side-nav-item" data-section="research">
-    <span class="side-nav-label">Research</span>
-    <span class="side-nav-dot"></span>
-  </a>
-  <a href="#teaching" class="side-nav-item" data-section="teaching">
-    <span class="side-nav-label">Teaching</span>
-    <span class="side-nav-dot"></span>
-  </a>
-  <a href="#consulting" class="side-nav-item" data-section="consulting">
-    <span class="side-nav-label">Consulting</span>
-    <span class="side-nav-dot"></span>
-  </a>
-  <a href="#contact" class="side-nav-item" data-section="contact">
-    <span class="side-nav-label">Contact</span>
-    <span class="side-nav-dot"></span>
-  </a>
-</nav>
-
 <!-- BACK TO TOP -->
 <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">↑ Top</a>
 
@@ -1425,7 +1344,6 @@ footer {
     hamburger.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', isOpen);
   });
-  // Close mobile menu on link click
   document.querySelectorAll('.mobile-link').forEach(function (link) {
     link.addEventListener('click', function () {
       mobileMenu.classList.remove('open');
@@ -1434,25 +1352,8 @@ footer {
     });
   });
 
-  // ── Side dot nav + back to top (IntersectionObserver) ──
-  const sections = ['home', 'about', 'research', 'teaching', 'consulting', 'contact'];
-  const dots = {};
-  sections.forEach(function (id) {
-    dots[id] = document.querySelector('.side-nav-item[data-section="' + id + '"]');
-  });
+  // ── Back to top ──
   const backToTop = document.getElementById('backToTop');
-
-  const observers = {};
-  let current = 'home';
-
-  function setActive(id) {
-    if (current === id) return;
-    if (dots[current]) dots[current].classList.remove('active');
-    current = id;
-    if (dots[id]) dots[id].classList.add('active');
-  }
-
-  // Back to top visibility
   const homeSection = document.getElementById('home');
   const homeObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -1464,21 +1365,6 @@ footer {
     });
   }, { threshold: 0.1 });
   if (homeSection) homeObserver.observe(homeSection);
-
-  // Active section tracking
-  sections.forEach(function (id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const obs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) setActive(id);
-      });
-    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
-    obs.observe(el);
-  });
-
-  // Set initial active dot
-  if (dots['home']) dots['home'].classList.add('active');
 })();
 </script>
 </body>
