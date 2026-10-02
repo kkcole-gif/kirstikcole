@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirsti K. Cole, PhD | Curriculum Vitae</title>
+<meta name="description" content="Curriculum vitae of Kirsti K. Cole, Professor of English and Co-Director of the Campus Writing and Speaking Program at North Carolina State University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beenie&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/neue-machina" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #FCF7E9; --white: #FFFFFF; --parchment: #F5ECD3; --rule: #E3D5B5;
+  --ink: #41292B; --ink-mid: #5A4446; --ink-light: #6A5557;
+  --red: #C22627; --deep-red: #891A17; --teal: #457877; --teal-dark: #35605F; --hair: #588D8E;
+  --plum: #6C4880; --night-ink: #383140; --night-deep: #1E161B; --gold: #F1C476; --coral: #EA7965;
+  --display: 'Neue Machina', 'DM Sans', sans-serif;
+  --hand: 'Reenie Beenie', cursive;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+  /* palette: Parchment */
+  --page: #FAF4E4; --band: #F5ECD3; --rule: #E3D5B5; --accent: #891A17; --accent-deep: #891A17; --num: #E15A54; --label: #891A17;
+  --link: #35605F; --link-line: #588D8E; --link-hover: #C22627; --eyebrow: #457877; --btn: #C22627; --btn-hover: #891A17;
+  --deco: #EA7965; --g1: #F1C476; --g2: #EA7965; --g3: #E15A54; --g4: #891A17;
+  --tag-bg: #F3E4C0; --tag-border: #CAA876; --tag-text: #41292B; --st-review: #6C4880; --st-forth: #35605F;
+}
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { background: var(--page); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--link-line); transition: color .2s, border-color .2s; }
+a:hover { color: var(--link-hover); border-color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--cream); padding: .6rem 1rem; z-index: 400; border: none; }
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* NAV */
+nav.top { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: color-mix(in srgb, var(--band) 95%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; height: 52px; }
+.nav-name { font-family: var(--display); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-deep); border: none; }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a { font-family: var(--mono); font-size: .65rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-light); border: none; }
+.nav-links a:hover { color: var(--accent); }
+
+/* HEADER */
+header.cv-head { background: var(--band); padding: 7rem 3rem 3.5rem; position: relative; border-bottom: 1px solid var(--rule); }
+header.cv-head::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3), var(--g4)); }
+.wrap { max-width: 960px; margin: 0 auto; }
+.eyebrow { font-family: var(--hand); font-size: 1.5rem; color: var(--eyebrow); line-height: 1.3; }
+h1 { font-family: var(--display); font-size: clamp(2.6rem, 5.5vw, 4.5rem); font-weight: 800; line-height: .95; letter-spacing: -.02em; text-transform: uppercase; color: var(--ink); margin-top: .35rem; }
+h1 span { color: var(--accent); }
+.head-meta { margin-top: 1.5rem; font-family: var(--mono); font-size: .75rem; color: var(--ink-light); letter-spacing: .04em; line-height: 1.9; border-left: 3px solid var(--deco); padding-left: 1rem; }
+.head-meta a { color: var(--link); }
+.head-actions { margin-top: 1.75rem; display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
+.btn { font-family: var(--display); font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .8rem 1.6rem; display: inline-block; border: 2px solid var(--btn); background: var(--btn); color: #fff; cursor: pointer; transition: background .2s, transform .15s; }
+.btn:hover { background: var(--btn-hover); border-color: var(--btn-hover); color: #fff; transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--link); border-color: var(--link); }
+.btn.ghost:hover { background: var(--link); border-color: var(--link); color: #fff; }
+.updated { font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-light); }
+
+/* LAYOUT WITH STICKY SECTION RAIL */
+.cv-head .wrap { max-width: 1104px; padding-left: 248px; }
+.layout { max-width: 1200px; margin: 0 auto; padding: 0 3rem; display: grid; grid-template-columns: 200px 1fr; gap: 3rem; }
+.rail { position: sticky; top: 76px; align-self: start; padding-top: 3.75rem; }
+.rail ol { list-style: none; }
+.rail a { display: flex; gap: .7rem; align-items: baseline; font-family: var(--mono); font-size: .66rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-light); padding: .45rem 0 .45rem .85rem; border: none; border-left: 2px solid var(--rule); transition: color .2s, border-color .2s; }
+.rail a span { color: var(--ink-light); font-size: .6rem; }
+.rail a:hover { color: var(--accent); }
+.rail a[aria-current="true"] { color: var(--accent); border-left-color: var(--accent); }
+.rail a[aria-current="true"] span { color: var(--accent); }
+
+/* SECTIONS */
+main { padding: 0 0 5rem; min-width: 0; }
+section.cv { padding: 3.5rem 0 .5rem; }
+.sec-head { display: flex; align-items: baseline; gap: 1.1rem; padding-bottom: .9rem; margin-bottom: 1.75rem; border-bottom: 2px solid var(--rule); }
+.sec-num { font-family: var(--display); font-size: 2.6rem; font-weight: 800; color: var(--num); line-height: 1; letter-spacing: -.02em; }
+h2 { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; text-transform: uppercase; letter-spacing: .01em; line-height: 1; color: var(--ink); }
+h3 { font-family: var(--display); font-size: .68rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--label); margin: 2rem 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: .7rem; }
+h3::before { content: ''; width: 18px; height: 2px; background: var(--accent); display: block; flex-shrink: 0; }
+h3:first-of-type { margin-top: 0; }
+
+ul.entries { list-style: none; }
+ul.entries > li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1.25rem; padding: .85rem 0; border-bottom: 1px solid var(--rule); font-size: .92rem; color: var(--ink-mid); line-height: 1.7; break-inside: avoid; }
+ul.entries > li:last-child { border-bottom: none; }
+.when { font-family: var(--mono); font-size: .66rem; font-weight: 500; letter-spacing: .05em; color: var(--accent); padding-top: .25rem; line-height: 1.5; }
+.when.st-review { color: var(--st-review); }
+.when.st-forth { color: var(--st-forth); }
+.entry-title { font-weight: 500; color: var(--ink); }
+.entry-sub { color: var(--ink-light); font-size: .85rem; }
+.entry em { font-style: italic; color: var(--ink); }
+.entry ul { list-style: none; margin-top: .4rem; }
+.entry ul li { position: relative; padding: .15rem 0 .15rem 1.1rem; font-size: .88rem; line-height: 1.6; }
+.entry ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--accent); font-size: .65rem; top: .32rem; }
+.flag { font-family: var(--mono); font-size: .56rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--accent); padding: .1rem .4rem; margin-left: .35rem; vertical-align: middle; }
+.flag.awarded { background: var(--st-forth); }
+p.plain { font-size: .92rem; color: var(--ink-mid); max-width: 760px; }
+.areas { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; }
+.areas li { font-family: var(--mono); font-size: .64rem; letter-spacing: .07em; text-transform: uppercase; padding: .3rem .7rem; background: var(--tag-bg); border: 1px solid var(--tag-border); color: var(--tag-text); }
+
+/* FOOTER */
+footer { background: var(--night-deep); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.foot-name { font-family: var(--display); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.foot-right { font-family: var(--mono); font-size: .62rem; color: #BDB4C4; letter-spacing: .05em; }
+.foot-right a { color: #D9D2DE; border: none; }
+.foot-right a:hover { color: var(--gold); }
+footer a:focus-visible { outline-color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 1040px) { .layout { grid-template-columns: 1fr; } .rail { display: none; } .cv-head .wrap { padding-left: 0; } }
+@media (max-width: 900px) {
+  nav.top { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  header.cv-head { padding: 6rem 1.25rem 2.5rem; }
+  .cv-head .wrap { padding-left: 0; }
+  .layout { display: block; padding: 0 1.25rem; }
+  .rail { display: none; }
+  main { padding: 0 0 4rem; }
+  ul.entries > li { grid-template-columns: 1fr; gap: .15rem; }
+  footer { padding: 1.5rem 1.25rem; flex-direction: column; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* PRINT: one clean, color-preserving PDF from this same page */
+@media print {
+  @page { margin: 0.7in; }
+  nav.top, .head-actions, .skip, footer, .rail { display: none !important; }
+  .layout { display: block; padding: 0; max-width: none; }
+  .cv-head .wrap { padding-left: 0; max-width: none; }
+  html { font-size: 10.5pt; }
+  body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  header.cv-head { padding: 0 0 1rem; background: #fff; border-bottom: 2px solid var(--rule); }
+  header.cv-head::before { display: none; }
+  h1 { font-size: 2.4rem; }
+  main { padding: 0; }
+  .when.st-review, .when.st-forth { color: var(--ink-mid); }
+  section.cv { padding: 1.4rem 0 0; }
+  .sec-head { margin-bottom: 1rem; }
+  ul.entries > li { padding: .5rem 0; }
+  a { color: var(--ink-mid); border: none; }
+  h3, .sec-head { break-after: avoid; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<nav class="top" aria-label="CV sections">
+  <a href="index.html" class="nav-name">Kirsti K. Cole</a>
+  <ul class="nav-links">
+    <li><a href="#appointments">Appointments</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#presentations">Presentations</a></li>
+    <li><a href="#grants">Grants</a></li>
+    <li><a href="#service">Service</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</nav>
+
+<header class="cv-head">
+  <div class="wrap">
+    <div class="eyebrow">Curriculum Vitae</div>
+    <h1>Kirsti K. <span>Cole</span></h1>
+    <div class="head-meta">
+      Professor of English &middot; Co-Director, Campus Writing &amp; Speaking Program<br>
+      North Carolina State University &middot; Raleigh, NC<br>
+      <a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a> &middot; <a href="https://kirstikcole.com/">kirstikcole.com</a>
+    </div>
+    <div class="head-actions">
+      <button class="btn" type="button" onclick="window.print()">Print or save as PDF</button>
+      <a class="btn ghost" href="index.html">Back to site</a>
+      <span class="updated">Updated October 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="rail" aria-label="CV sections">
+  <ol>
+    <li><a href="#appointments"><span>01</span>Appointments</a></li>
+    <li><a href="#education"><span>02</span>Education</a></li>
+    <li><a href="#areas"><span>03</span>Research</a></li>
+    <li><a href="#publications"><span>04</span>Publications</a></li>
+    <li><a href="#presentations"><span>05</span>Presentations</a></li>
+    <li><a href="#grants"><span>06</span>Grants</a></li>
+    <li><a href="#service"><span>07</span>Service</a></li>
+    <li><a href="#mentoring"><span>08</span>Mentoring</a></li>
+    <li><a href="#awards"><span>09</span>Awards</a></li>
+  </ol>
+</aside>
+<main id="main">
+<div class="wrap">
+
+<section class="cv" id="appointments" aria-labelledby="h-appointments">
+  <div class="sec-head"><div class="sec-num">01</div><h2 id="h-appointments">Academic Appointments</h2></div>
+  <ul class="entries">
+    <li><div class="when">2023&ndash;present</div><div class="entry"><div class="entry-title">Professor of English; Co-Director, Campus Writing &amp; Speaking Program</div><div class="entry-sub">North Carolina State University &middot; Raleigh, NC</div>
+      <ul>
+        <li>Lead faculty development in writing-enriched curricula, and teach graduate courses in rhetoric, composition theory, multimodal composition, and writing program administration</li>
+        <li>Co-direct signature programs including the Communication Teaching Certificate (C2TC), <a href="https://cwspwolf.com/" target="_blank" rel="noopener">WOLF (Written and Oral Literacy Facilitation)</a>, and the Wolfpack Writes 14-Day Challenge</li>
+        <li>CWSP received the 2024 AWAC Exemplary WAC Program Award</li>
+      </ul></div></li>
+    <li><div class="when">2018&ndash;2023</div><div class="entry"><div class="entry-title">Professor of English</div><div class="entry-sub">Minnesota State University (Assistant Professor 2008, Associate Professor 2013)</div>
+      <ul>
+        <li>Graduate and undergraduate teaching in rhetoric, composition theory, literary theory, and gender studies</li>
+        <li>Director, Writing Across the Curriculum (2013&ndash;2016): designed cross-campus writing assessment, established the WAC Committee, and facilitated professional development</li>
+      </ul></div></li>
+  </ul>
+</section>
+
+<section class="cv" id="education" aria-labelledby="h-education">
+  <div class="sec-head"><div class="sec-num">02</div><h2 id="h-education">Education</h2></div>
+  <ul class="entries">
+    <li><div class="when">2021</div><div class="entry"><div class="entry-title">Graduate Certificate, Medical Writing and Editing</div><div class="entry-sub">University of Chicago</div></div></li>
+    <li><div class="when">2008</div><div class="entry"><div class="entry-title">Ph.D. in English (Rhetoric, Composition, and Literature)</div><div class="entry-sub">Arizona State University</div></div></li>
+    <li><div class="when">2008</div><div class="entry"><div class="entry-title">Graduate Certificate, Gender and Women&rsquo;s Studies</div><div class="entry-sub">Arizona State University</div></div></li>
+    <li><div class="when">2001</div><div class="entry"><div class="entry-title">B.A. in English, <em>magna cum laude</em></div><div class="entry-sub">University of Montana, Missoula</div></div></li>
+  </ul>
+</section>
+
+<section class="cv" id="areas" aria-labelledby="h-areas">
+  <div class="sec-head"><div class="sec-num">03</div><h2 id="h-areas">Research Areas</h2></div>
+  <ul class="areas">
+    <li>Institutional Literacy &amp; Writing Program Studies</li>
+    <li>Feminist &amp; Critical Rhetorical Theory</li>
+    <li>Digital &amp; Multimodal Rhetorics</li>
+    <li>Ethical AI Integration</li>
+    <li>Academic Labor &amp; Governance</li>
+    <li>Health &amp; Medical Humanities</li>
+    <li>Communication of Science &amp; Medicine</li>
+  </ul>
+</section>
+
+<section class="cv" id="publications" aria-labelledby="h-publications">
+  <div class="sec-head"><div class="sec-num">04</div><h2 id="h-publications">Publications</h2></div>
+
+  <h3>Books</h3>
+  <ul class="entries">
+    <li><div class="when st-review">Under review</div><div class="entry">Cole, Kirsti. <em>The Glitch Curriculum: How Universities Read Themselves in the AI Moment.</em> Under consideration with Johns Hopkins University Press.</div></li>
+    <li><div class="when st-review">Under review</div><div class="entry">Bivens, Kristin, and Kirsti Cole, Eds. <em>Bad Ideas about Scientific Writing.</em> Under consideration with WAC Clearinghouse.</div></li>
+    <li><div class="when">2023</div><div class="entry">Cole, Kirsti, Holly Hassel, and Joanne Giordano. <em>A Faculty Guidebook for Effective Shared Governance and Service in Higher Education.</em> Routledge.</div></li>
+  </ul>
+
+  <h3>Edited Collections</h3>
+  <ul class="entries">
+    <li><div class="when">2026</div><div class="entry">Cole, Kirsti, and Sarah Henderson Lee, Eds. <em>Reimagining Graduate Education in Writing Studies: Sustainable, Equitable, and Inclusive Approaches.</em> Routledge.</div></li>
+    <li><div class="when">2023</div><div class="entry">Cole, Kirsti, and Valerie Renegar, Eds. <em>Refiguring Motherhood Beyond Biology.</em> Routledge.</div></li>
+    <li><div class="when">2021</div><div class="entry">Cole, Kirsti, and Holly Hassel, Eds. <em>Transformations: Change Work Across Writing Programs, Pedagogies, and Practices.</em> Utah State University Press.</div></li>
+    <li><div class="when">2019</div><div class="entry">Cole, Kirsti, and Holly Hassel, Eds. <em>Academic Labor Beyond the Classroom: Working for Our Values.</em> Routledge.</div></li>
+    <li><div class="when">2017</div><div class="entry">Cole, Kirsti, and Holly Hassel, Eds. <em>Surviving Sexism in Academia: Strategies for Feminist Leadership.</em> Routledge.</div></li>
+    <li><div class="when">2014</div><div class="entry">Cole, Kirsti, Ed. <em>Feminist Challenges or Feminist Rhetorics?: Locations, Scholarship, and Discourse.</em> Cambridge Scholars Press.</div></li>
+  </ul>
+
+  <h3>Guest-Edited Special Issues</h3>
+  <ul class="entries">
+    <li><div class="when st-forth">Forthcoming<br>Oct. 2026</div><div class="entry">Cole, Kirsti, and Holly Hassel, Guest Eds. &ldquo;When Words Become Work.&rdquo; <em>Composition Studies</em>, Special Digital Issue.</div></li>
+    <li><div class="when">Feb. 2026</div><div class="entry">Anson, Chris, and Kirsti Cole, Guest Eds. &ldquo;Empirical Studies of Writing and Generative AI.&rdquo; <em>Journal of Writing Research</em>, Special Issue 17.3. <a href="https://www.jowr.org/jowr/issue/view/168" target="_blank" rel="noopener">View issue</a></div></li>
+  </ul>
+
+  <h3>Refereed Articles (Selected)</h3>
+  <ul class="entries">
+    <li><div class="when st-review">Under review</div><div class="entry">Cole, Kirsti. &ldquo;AI Literacy Is Not One Thing: Conceptual, Structural, and Operative Levels for Higher Education Governance.&rdquo; <em>Pedagogies</em>.</div></li>
+    <li><div class="when st-forth">Forthcoming</div><div class="entry">Cole, Kirsti, and Chris Anson. &ldquo;The Labor of Strategic Translation.&rdquo; <em>College Composition and Communication</em>.</div></li>
+    <li><div class="when st-forth">Forthcoming</div><div class="entry">Cole, Kirsti, Sarah Felber, Holly Hassel, et al. &ldquo;Strategic Friction: Writing and Literacy Programs and the Acceleration Imperative.&rdquo; <em>WPA Journal</em>.</div></li>
+    <li><div class="when st-forth">Forthcoming<br>Fall 2026</div><div class="entry">Cole, Kirsti, and Valerie R. Renegar. &ldquo;Discursive Archetypes: Kamala Harris and Repositioning Stepmotherhood.&rdquo; <em>Peitho</em>.</div></li>
+    <li><div class="when">Aug. 2026</div><div class="entry">Cole, Kirsti. &ldquo;Cyborg Composing and Posthuman Research Methods.&rdquo; <em>TextGenEd Continuing Experiments</em>.</div></li>
+    <li><div class="when">2026</div><div class="entry">Schwartzman, Roy, and Kirsti Cole. &ldquo;A Modest Futurist Manifesto for Reimagining Communication Centers in a Critical AI Landscape.&rdquo; <em>Communication Center Journal</em> 11(1).</div></li>
+    <li><div class="when">Aug. 2025</div><div class="entry">Cole, Kirsti, Biven Alexander, Wil Carr, Brody McCurdy, and Bethany Van Scooter. &ldquo;Reflective Multimodal Feedback Practices in Human and AI Writing Contexts.&rdquo; <em>TextGenEd Continuing Experiments</em>.</div></li>
+    <li><div class="when">2019</div><div class="entry">Renegar, Valerie R., and Kirsti Cole. &ldquo;&lsquo;Evil is Part of the Territory&rsquo;: Inventing the Stepmother in Self-Help Books.&rdquo; <em>Women&rsquo;s Studies in Communication</em>.</div></li>
+    <li><div class="when">2019</div><div class="entry">Bivens, Kristin, Kirsti Cole, and Leah Hellig. &ldquo;The Activist Syllabus as Technical Communication.&rdquo; <em>Technical Communication Quarterly</em>.</div></li>
+    <li><div class="when">2015</div><div class="entry">Cole, Kirsti. &ldquo;&lsquo;It&rsquo;s Like She&rsquo;s Eager to be Verbally Abused:&rsquo; Twitter, Trolls, and (En)gendering Disciplinary Rhetoric.&rdquo; <em>Feminist Media Studies</em> 15.2.</div></li>
+    <li><div class="when">2007</div><div class="entry">Webb, Patricia, Kirsti Cole, and Thomas Skeen. &ldquo;Feminist Social Projects: Building Bridges between Communities and Universities.&rdquo; <em>College English</em> 69.3.</div></li>
+  </ul>
+
+  <h3>Refereed Book Chapters (Selected)</h3>
+  <ul class="entries">
+    <li><div class="when st-forth">Forthcoming<br>Spring 2027</div><div class="entry">Cole, Kirsti. &ldquo;Writing as Social Action: ENG 422 as a Course Structured by AI Literacy.&rdquo; In <em>Teaching AI</em>. EdTech Books.</div></li>
+    <li><div class="when st-forth">Forthcoming<br>Fall 2026</div><div class="entry">Cole, Kirsti, and Bethany Van Scooter. &ldquo;Navigating Visibility Matrices: Institutional Literacy and Contingent Labor in Writing Programs.&rdquo; In <em>Precarious Pedagogies</em>. University of Colorado Press.</div></li>
+    <li><div class="when st-forth">Forthcoming<br>Fall 2026</div><div class="entry">Cole, Kirsti, and Bethany Van Scooter. &ldquo;Running on Coffee, Guilt, and Calendar Reminders: Neurodivergent Academic Motherhood Across Career Stages.&rdquo; In <em>Narratives of Persistence and Survival</em>. Lexington Books.</div></li>
+    <li><div class="when">May 2026</div><div class="entry">Anson, Chris, and Kirsti Cole. &ldquo;Writing With AI Requires Human Rhetorical Agency.&rdquo; In <em>Bad Ideas about AI and Writing</em>. WAC Clearinghouse. <a href="https://wacclearinghouse.org/books/perspectives/bad/" target="_blank" rel="noopener">Read online</a></div></li>
+    <li><div class="when">2026</div><div class="entry">Cole, Kirsti, and Sarah Henderson Lee. &ldquo;Creating Collaborative Conditions.&rdquo; In <em>Reimagining Graduate Education in Writing Studies</em>. Routledge.</div></li>
+    <li><div class="when">2024</div><div class="entry">Cole and Wagner. &ldquo;Crisis Pregnancy Centers: Digital Rhetoric, Misinformation, and Trust.&rdquo; In <em>Trust under Threat</em>. Waxmann Verlag GmbH.</div></li>
+    <li><div class="when">2023</div><div class="entry">Moreland, Lee, and Cole. &ldquo;(E)merging Expertise: Multivocal, Multimodal Preparation of Graduate Teaching Assistants.&rdquo; In <em>Professionalizing Multimodal Composition</em>. Utah State University Press.</div></li>
+    <li><div class="when">2020</div><div class="entry">Bivens, Cole, and Koerber. &ldquo;Activism by Accuracy: Women&rsquo;s Health and Hormonal Birth Control.&rdquo; In <em>Women&rsquo;s Health Advocacy</em>. Routledge.</div></li>
+  </ul>
+</section>
+
+<section class="cv" id="presentations" aria-labelledby="h-presentations">
+  <div class="sec-head"><div class="sec-num">05</div><h2 id="h-presentations">Presentations</h2></div>
+
+  <h3>Invited Keynotes and Workshops</h3>
+  <ul class="entries">
+    <li><div class="when">Sept. 2026</div><div class="entry"><em>Is it OK to use AI for this?</em> Invited Keynote, Student Media Training Day 2026, NC State University.</div></li>
+    <li><div class="when">May 2026</div><div class="entry"><em>Writing in the Machine&rsquo;s Shadow: Ethics and equity in agentic AI.</em> Invited Presentation, Ethics and Agentic AI Symposium at NC State. Raleigh, NC.</div></li>
+    <li><div class="when">Feb. 2026</div><div class="entry"><em>Building Sustainable WEC Programs: Institutional Ethnography as Strategic Tool.</em> Invited Keynote (with Schwartzman), Write@UGA Conference. Athens, GA.</div></li>
+    <li><div class="when">Feb. 2026</div><div class="entry"><em>Practical Tools to Cultivate Writing in Your Context.</em> Invited Workshop (with Schwartzman), Write@UGA Conference. Athens, GA.</div></li>
+    <li><div class="when">June 2025</div><div class="entry"><em>Writing with, not for, AI.</em> Invited Workshop, IWCA Summer Institute, UDLAP. Cholula, Mexico.</div></li>
+    <li><div class="when">Feb. 2025</div><div class="entry"><em>AI, Ethics, Industry, and Academia</em> (with Boinodiris and Smith). Grand Challenges Scholars Program Annual Meeting, NC State.</div></li>
+    <li><div class="when">2014</div><div class="entry">&ldquo;Where Do We Go From Here? Two Decades of the Feminist Workshop.&rdquo; Keynote, CCCC Feminist Workshop. Indianapolis, IN.</div></li>
+    <li><div class="when">2011</div><div class="entry">&ldquo;20 Years of Feminist Work(shop).&rdquo; Keynote, CCCC Feminist Workshop. Atlanta, GA.</div></li>
+  </ul>
+
+  <h3>Selected Conference Presentations</h3>
+  <ul class="entries">
+    <li><div class="when">July 2026</div><div class="entry"><em>The Burkean Skeleton Key: Strategic Canonicity in Precarious Times</em> (with Renegar). Rhetoric in a Precarious World. Ghent, Belgium.</div></li>
+    <li><div class="when">June 2026</div><div class="entry"><em>Building AI-Informed Communication Pathways: A Practical Framework for Scaffolded Instruction from First-Year to Capstone</em> (with Qaqish and Allard). ASEE. Charlotte, NC.</div></li>
+    <li><div class="when">Feb. 2026</div><div class="entry"><em>The Weight of Stigma</em> (with Renegar). WSCA Convention. San Diego, CA.</div></li>
+    <li><div class="when">July 2025</div><div class="entry"><em>Writing, Research, and Resilience</em> (with Lee, Moreland, and Turner). IWAC Conference. Fort Collins, CO.</div></li>
+    <li><div class="when">July 2025</div><div class="entry"><em>Revitalizing Writing Enriched Curriculum</em> (with Schwartzman). IWAC Conference. Fort Collins, CO.</div></li>
+    <li><div class="when">Apr. 2025</div><div class="entry"><em>Where Policy Meets Position</em> (with Hassel). CCCC. Baltimore, MD.</div></li>
+    <li><div class="when">Mar. 2025</div><div class="entry"><em>Writing in the Age of AI.</em> NC State University Research Symposium.</div></li>
+    <li><div class="when">Oct. 2024</div><div class="entry"><em>Digital Collaboration: Modeling Writing and Editing Practices through Horizontal Mentoring</em> (with Renegar and Sowards). NKRF9. Copenhagen, Denmark.</div></li>
+    <li><div class="when">June 2024</div><div class="entry"><em>Out with the Old: Reconstructing Cognitive Models of Writing when AI Intervenes</em> (with Anson). ways2write/EARLI SIG Writing. Paris, France.</div></li>
+  </ul>
+</section>
+
+<section class="cv" id="grants" aria-labelledby="h-grants">
+  <div class="sec-head"><div class="sec-num">06</div><h2 id="h-grants">Grants and Funding</h2></div>
+
+  <h3>Awarded</h3>
+  <ul class="entries">
+    <li><div class="when">2026</div><div class="entry"><div class="entry-title">Engineering Information Foundation (EiF), VANTAGE <span class="flag awarded">Awarded Aug. 2026</span></div><div class="entry-sub">Enhancing Communication in Engineering Education &middot; Co-PI with Alice Cheng and Roy Schwartzman &middot; $24,999</div></div></li>
+    <li><div class="when">2026</div><div class="entry"><div class="entry-title">Academic Innovation Accelerator Program</div><div class="entry-sub">CHASS Curriculum Accelerator: Powering Human-Focused AI &middot; Co-PI with James Mulholland and Huiling Ding &middot; NC State University &middot; $20,000</div></div></li>
+    <li><div class="when">2026</div><div class="entry"><div class="entry-title">OASIS Teaching Innovation Grant</div><div class="entry-sub">NC State University &middot; $2,400</div></div></li>
+    <li><div class="when">2024</div><div class="entry"><div class="entry-title">CHASS Wellness Grant</div><div class="entry-sub">NC State University &middot; $3,000</div></div></li>
+    <li><div class="when">2020, 2012</div><div class="entry"><div class="entry-title">Faculty Research Grant</div><div class="entry-sub">Minnesota State University &middot; $5,000</div></div></li>
+    <li><div class="when">2015</div><div class="entry"><div class="entry-title">Nadine B. Andreas Scholar Award</div><div class="entry-sub">Minnesota State University &middot; $9,000</div></div></li>
+    <li><div class="when">2013&ndash;2015</div><div class="entry"><div class="entry-title">Arts and Humanities Research Grant</div><div class="entry-sub">Minnesota State University &middot; $2,500 per year</div></div></li>
+  </ul>
+
+  <h3>Pending</h3>
+  <ul class="entries">
+    <li><div class="when">2026</div><div class="entry">National Humanities Center Residential Fellowship, AY 2027&ndash;28, to support <em>The Glitch Curriculum</em>. Submitted.</div></li>
+    <li><div class="when">Apr. 2026</div><div class="entry">NC State Foundation Grant: &ldquo;The AI Writing Studio&rdquo; (with Van Scooter, co-PI). $25,000. Submitted.</div></li>
+  </ul>
+
+  <h3>In Development</h3>
+  <ul class="entries">
+    <li><div class="when">2026</div><div class="entry">NSF Professional Formation of Engineers (PFE), Track 1 planning grant: Validating and Scaling AI-Informed Communication Pedagogy (with Allard and Qaqish). $75,000.</div></li>
+    <li><div class="when">2026</div><div class="entry">DELTA Exploratory Grant: AI Ethics in Culturally Responsive STEM Literacy (with Schwartzman, Berube, and Watson).</div></li>
+  </ul>
+</section>
+
+<section class="cv" id="service" aria-labelledby="h-service">
+  <div class="sec-head"><div class="sec-num">07</div><h2 id="h-service">Service</h2></div>
+
+  <h3>Service to the Profession</h3>
+  <ul class="entries">
+    <li><div class="when">2025&ndash;present</div><div class="entry">Elected Member, MLA AI and Research Working Group</div></li>
+    <li><div class="when">2025</div><div class="entry">Co-Author, AWAC Statement on AI Writing Tools in WAC Settings</div></li>
+    <li><div class="when">Ongoing</div><div class="entry">External Tenure and Promotion Reviews, seven institutions</div></li>
+    <li><div class="when">June&ndash;Sept. 2025</div><div class="entry">Consulting Workshops, IsolereBio Workplace Communication Series, five workshops</div></li>
+    <li><div class="when">2016&ndash;present</div><div class="entry">Member, Editorial and Reviews Board, <em>Peitho</em></div></li>
+    <li><div class="when">2010&ndash;present</div><div class="entry">Member, Reviews Board, <em>Composition Studies</em></div></li>
+    <li><div class="when">2012&ndash;present</div><div class="entry">Member, Editorial Board, <em>Undergraduate Journal of Service Learning and Community-Based Research</em></div></li>
+    <li><div class="when">2011</div><div class="entry">Chair, International Conference on Feminisms and Rhetorics, Mankato, MN</div></li>
+  </ul>
+
+  <h3>Service to the University</h3>
+  <ul class="entries">
+    <li><div class="when">2025&ndash;present</div><div class="entry">ISI Faculty Workshop Development: writing, AI integration, and disciplinary communication</div></li>
+    <li><div class="when">2024&ndash;2026</div><div class="entry">Evaluation of Teaching Committee, NC State University</div></li>
+    <li><div class="when">Aug. 2025</div><div class="entry">Workshop Facilitator, &ldquo;AI Tools to Enhance Classroom Practices,&rdquo; Engineering New Faculty Orientation</div></li>
+    <li><div class="when">2018&ndash;2022</div><div class="entry">Arts and Humanities Unit Representative, IFO, Minnesota State University</div></li>
+    <li><div class="when">2015&ndash;2017</div><div class="entry">President, President&rsquo;s Commission on the Status of Women, Minnesota State University</div></li>
+  </ul>
+
+  <h3>Service to the Department</h3>
+  <ul class="entries">
+    <li><div class="when">AY 2026&ndash;27</div><div class="entry">Convener, Research, Tenure &amp; Promotion Committee, NC State English Department</div></li>
+    <li><div class="when">AY 2025&ndash;26</div><div class="entry">PTR Committee Chair, NC State English Department</div></li>
+    <li><div class="when">Ongoing</div><div class="entry">CRDM Program Committee Member</div></li>
+    <li><div class="when">Nov. 2024</div><div class="entry">Faculty Mentors&rsquo; Retreat Co-Organizer</div></li>
+  </ul>
+</section>
+
+<section class="cv" id="mentoring" aria-labelledby="h-mentoring">
+  <div class="sec-head"><div class="sec-num">08</div><h2 id="h-mentoring">Graduate Mentoring</h2></div>
+  <ul class="entries">
+    <li><div class="when">Current</div><div class="entry">Dissertation Director for two doctoral candidates, NC State University</div></li>
+    <li><div class="when">Fall 2026</div><div class="entry">Directed independent study, ENG 636, cultural rhetorics reading group (three MA students)</div></li>
+    <li><div class="when">Fall 2026</div><div class="entry">Directed independent study, CRD 810, AI literacy (one doctoral student)</div></li>
+  </ul>
+</section>
+
+<section class="cv" id="awards" aria-labelledby="h-awards">
+  <div class="sec-head"><div class="sec-num">09</div><h2 id="h-awards">Awards and Honors</h2></div>
+  <ul class="entries">
+    <li><div class="when">2024</div><div class="entry">AWAC Exemplary Enduring WAC Program, Campus Writing &amp; Speaking Program, NC State University</div></li>
+    <li><div class="when">2018</div><div class="entry">Nominee, Winifred Bryan Horner Outstanding Book Award, Coalition of Feminist Scholars in the History of Rhetoric and Composition</div></li>
+    <li><div class="when">2013&ndash;2015</div><div class="entry">Arts and Humanities Research Grant Recipient, Minnesota State University</div></li>
+  </ul>
+  <p class="plain" style="margin-top:2rem">References available upon request.</p>
+</section>
+
+</div>
+</main>
+</div>
+
+<footer>
+  <div class="foot-name">Kirsti K. Cole, PhD</div>
+  <div class="foot-right">NC State University &middot; Raleigh, NC &middot; <a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a></div>
+</footer>
+<script>
+(function () {
+  var links = document.querySelectorAll('.rail a');
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        links.forEach(function (a) { a.removeAttribute('aria-current'); });
+        var a = map[e.target.id];
+        if (a) a.setAttribute('aria-current', 'true');
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  document.querySelectorAll('section.cv').forEach(function (sec) { io.observe(sec); });
+})();
+</script>
+</body>
+</html>

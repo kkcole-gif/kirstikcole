@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirsti K. Cole, PhD | Teaching Philosophy</title>
+<meta name="description" content="Teaching philosophy of Kirsti K. Cole, Professor of English and Co-Director of the Campus Writing and Speaking Program at North Carolina State University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beenie&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/neue-machina" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream: #FCF7E9; --white: #FFFFFF; --parchment: #F5ECD3; --rule: #E3D5B5;
+  --ink: #41292B; --ink-mid: #5A4446; --ink-light: #6A5557;
+  --red: #C22627; --deep-red: #891A17; --teal: #457877; --teal-dark: #35605F; --hair: #588D8E;
+  --plum: #6C4880; --night-ink: #383140; --night-deep: #1E161B; --gold: #F1C476; --coral: #EA7965;
+  --display: 'Neue Machina', 'DM Sans', sans-serif;
+  --hand: 'Reenie Beenie', cursive;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+  /* palette: Dusk, inherited from the Teaching section of the home page */
+  --page: #FFFFFF; --band: #583B65; --rule: #E3DAEA; --accent: #6C4880; --accent-deep: #583B65; --num: #C22627; --label: #583B65;
+  --link: #6C4880; --link-line: #9B7BAF; --link-hover: #C22627; --eyebrow: #C3D6CE; --btn: #F1C476; --btn-hover: #FCF7E9;
+  --deco: #F1C476; --g1: #F1C476; --g2: #EA7965; --g3: #C22627; --g4: #6C4880;
+  --tag-bg: #F1EAF5; --tag-border: #9B7BAF; --tag-text: #583B65; --st-review: #891A17; --st-forth: #35605F;
+}
+html { font-size: 16px; scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { background: var(--page); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid var(--link-line); transition: color .2s, border-color .2s; }
+a:hover { color: var(--link-hover); border-color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--cream); padding: .6rem 1rem; z-index: 400; border: none; }
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* NAV */
+nav.top { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(252,247,233,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; height: 52px; }
+.nav-name { font-family: var(--display); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-deep); border: none; }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a { font-family: var(--mono); font-size: .65rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-light); border: none; }
+.nav-links a:hover { color: var(--accent); }
+
+/* HEADER */
+header.cv-head { background: var(--band); padding: 7rem 3rem 3.5rem; position: relative; border-bottom: 1px solid var(--rule); }
+header.cv-head::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3), var(--g4)); }
+.wrap { max-width: 960px; margin: 0 auto; }
+.eyebrow { font-family: var(--hand); font-size: 1.5rem; color: var(--eyebrow); line-height: 1.3; }
+h1 { font-family: var(--display); font-size: clamp(2.6rem, 5.5vw, 4.5rem); font-weight: 800; line-height: .95; letter-spacing: -.02em; text-transform: uppercase; color: var(--ink); margin-top: .35rem; }
+h1 span { color: var(--accent); }
+.head-meta { margin-top: 1.5rem; font-family: var(--mono); font-size: .75rem; color: var(--ink-light); letter-spacing: .04em; line-height: 1.9; border-left: 3px solid var(--deco); padding-left: 1rem; }
+.head-meta a { color: var(--link); }
+.head-actions { margin-top: 1.75rem; display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
+.btn { font-family: var(--display); font-size: .65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: .8rem 1.6rem; display: inline-block; border: 2px solid var(--btn); background: var(--btn); color: #fff; cursor: pointer; transition: background .2s, transform .15s; }
+.btn:hover { background: var(--btn-hover); border-color: var(--btn-hover); color: #fff; transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--link); border-color: var(--link); }
+.btn.ghost:hover { background: var(--link); border-color: var(--link); color: #fff; }
+.updated { font-family: var(--mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-light); }
+
+/* LAYOUT WITH STICKY SECTION RAIL */
+.cv-head .wrap { max-width: 1104px; padding-left: 248px; }
+.layout { max-width: 1200px; margin: 0 auto; padding: 0 3rem; display: grid; grid-template-columns: 200px 1fr; gap: 3rem; }
+.rail { position: sticky; top: 76px; align-self: start; padding-top: 3.75rem; }
+.rail ol { list-style: none; }
+.rail a { display: flex; gap: .7rem; align-items: baseline; font-family: var(--mono); font-size: .66rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-light); padding: .45rem 0 .45rem .85rem; border: none; border-left: 2px solid var(--rule); transition: color .2s, border-color .2s; }
+.rail a span { color: var(--ink-light); font-size: .6rem; }
+.rail a:hover { color: var(--accent); }
+.rail a[aria-current="true"] { color: var(--accent); border-left-color: var(--accent); }
+.rail a[aria-current="true"] span { color: var(--accent); }
+
+/* SECTIONS */
+main { padding: 0 0 5rem; min-width: 0; }
+section.cv { padding: 3.5rem 0 .5rem; }
+.sec-head { display: flex; align-items: baseline; gap: 1.1rem; padding-bottom: .9rem; margin-bottom: 1.75rem; border-bottom: 2px solid var(--rule); }
+.sec-num { font-family: var(--display); font-size: 2.6rem; font-weight: 800; color: var(--num); line-height: 1; letter-spacing: -.02em; }
+h2 { font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 2rem); font-weight: 800; text-transform: uppercase; letter-spacing: .01em; line-height: 1; color: var(--ink); }
+h3 { font-family: var(--display); font-size: .68rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--label); margin: 2rem 0 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: .7rem; }
+h3::before { content: ''; width: 18px; height: 2px; background: var(--accent); display: block; flex-shrink: 0; }
+h3:first-of-type { margin-top: 0; }
+
+ul.entries { list-style: none; }
+ul.entries > li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1.25rem; padding: .85rem 0; border-bottom: 1px solid var(--rule); font-size: .92rem; color: var(--ink-mid); line-height: 1.7; break-inside: avoid; }
+ul.entries > li:last-child { border-bottom: none; }
+.when { font-family: var(--mono); font-size: .66rem; font-weight: 500; letter-spacing: .05em; color: var(--accent); padding-top: .25rem; line-height: 1.5; }
+.when.st-review { color: var(--st-review); }
+.when.st-forth { color: var(--st-forth); }
+.entry-title { font-weight: 500; color: var(--ink); }
+.entry-sub { color: var(--ink-light); font-size: .85rem; }
+.entry em { font-style: italic; color: var(--ink); }
+.entry ul { list-style: none; margin-top: .4rem; }
+.entry ul li { position: relative; padding: .15rem 0 .15rem 1.1rem; font-size: .88rem; line-height: 1.6; }
+.entry ul li::before { content: '\2192'; position: absolute; left: 0; color: var(--accent); font-size: .65rem; top: .32rem; }
+.flag { font-family: var(--mono); font-size: .56rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--accent); padding: .1rem .4rem; margin-left: .35rem; vertical-align: middle; }
+.flag.awarded { background: var(--st-forth); }
+p.plain { font-size: .92rem; color: var(--ink-mid); max-width: 760px; }
+.areas { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; }
+.areas li { font-family: var(--mono); font-size: .64rem; letter-spacing: .07em; text-transform: uppercase; padding: .3rem .7rem; background: var(--tag-bg); border: 1px solid var(--tag-border); color: var(--tag-text); }
+
+/* FOOTER */
+footer { background: var(--night-deep); padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.foot-name { font-family: var(--display); font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.foot-right { font-family: var(--mono); font-size: .62rem; color: #BDB4C4; letter-spacing: .05em; }
+.foot-right a { color: #D9D2DE; border: none; }
+.foot-right a:hover { color: var(--gold); }
+footer a:focus-visible { outline-color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 1040px) { .layout { grid-template-columns: 1fr; } .rail { display: none; } .cv-head .wrap { padding-left: 0; } }
+@media (max-width: 900px) {
+  nav.top { padding: 0 1.25rem; }
+  .nav-links { display: none; }
+  header.cv-head { padding: 6rem 1.25rem 2.5rem; }
+  .cv-head .wrap { padding-left: 0; }
+  .layout { display: block; padding: 0 1.25rem; }
+  .rail { display: none; }
+  main { padding: 0 0 4rem; }
+  ul.entries > li { grid-template-columns: 1fr; gap: .15rem; }
+  footer { padding: 1.5rem 1.25rem; flex-direction: column; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* PRINT: one clean, color-preserving PDF from this same page */
+@media print {
+  @page { margin: 0.7in; }
+  nav.top, .head-actions, .skip, footer, .rail { display: none !important; }
+  .layout { display: block; padding: 0; max-width: none; }
+  .cv-head .wrap { padding-left: 0; max-width: none; }
+  html { font-size: 10.5pt; }
+  body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  header.cv-head { padding: 0 0 1rem; background: #fff; border-bottom: 2px solid var(--rule); }
+  header.cv-head::before { display: none; }
+  h1 { font-size: 2.4rem; }
+  main { padding: 0; }
+  .when.st-review, .when.st-forth { color: var(--ink-mid); }
+  section.cv { padding: 1.4rem 0 0; }
+  .sec-head { margin-bottom: 1rem; }
+  ul.entries > li { padding: .5rem 0; }
+  a { color: var(--ink-mid); border: none; }
+  h3, .sec-head { break-after: avoid; }
+}
+
+/* DARK HEADER BAND */
+.cv-head h1 { color: var(--cream); }
+.cv-head h1 span { color: var(--gold); }
+.cv-head .head-meta { color: #D9CCDD; }
+.cv-head .head-meta a { color: var(--cream); border-bottom-color: rgba(252,247,233,.45); }
+.cv-head .btn { color: var(--ink); }
+.cv-head .btn:hover { color: var(--ink); }
+.cv-head .btn.ghost { color: var(--cream); border-color: rgba(252,247,233,.6); background: transparent; }
+.cv-head .btn.ghost:hover { background: var(--cream); border-color: var(--cream); color: var(--ink); }
+.cv-head .updated { color: #D9CCDD; }
+.cv-head a:focus-visible, .cv-head button:focus-visible { outline-color: var(--gold); }
+.epigraph { font-family: var(--hand); font-size: 1.7rem; line-height: 1.4; color: var(--gold); max-width: 640px; margin-top: 1.5rem; border-left: 3px solid var(--gold); padding-left: 1.1rem; }
+/* ESSAY */
+.essay p { font-size: 1.03rem; font-weight: 300; line-height: 1.9; color: var(--ink-mid); max-width: 70ch; margin-bottom: 1.2rem; }
+.essay h3 { margin-top: 2.25rem; }
+.essay .sec-head + h3 { margin-top: 0; }
+.signoff { font-family: var(--mono); font-size: .7rem; letter-spacing: .05em; color: var(--ink-light); margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+@media print {
+  header.cv-head { background: #fff !important; }
+  .cv-head h1 { color: var(--ink); } .cv-head h1 span { color: var(--red); }
+  .cv-head .head-meta, .cv-head .updated { color: var(--ink-light); } .cv-head .head-meta a { color: var(--ink-mid); }
+  .eyebrow { color: var(--teal); } .epigraph { color: var(--plum); border-left-color: var(--plum); font-size: 1.3rem; }
+  .essay p { font-size: 10.5pt; line-height: 1.6; max-width: none; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to content</a>
+
+<nav class="top" aria-label="Page sections">
+  <a href="index.html" class="nav-name">Kirsti K. Cole</a>
+  <ul class="nav-links">
+    <li><a href="#believe">Learning</a></li>
+    <li><a href="#commitments">Commitments</a></li>
+    <li><a href="#design">Course Design</a></li>
+    <li><a href="#learn">Still Learning</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</nav>
+
+<header class="cv-head">
+  <div class="wrap">
+    <div class="eyebrow">Teaching Philosophy</div>
+    <h1>Kirsti K. <span>Cole</span></h1>
+    <div class="head-meta">
+      Professor of English &middot; Co-Director, Campus Writing &amp; Speaking Program<br>
+      North Carolina State University &middot; Raleigh, NC
+    </div>
+    <p class="epigraph">Writing is never neutral &mdash; it shapes who we are, how we are perceived, and how we navigate the world.</p>
+    <div class="head-actions">
+      <button class="btn" type="button" onclick="window.print()">Print or save as PDF</button>
+      <a class="btn ghost" href="index.html#teaching">Back to site</a>
+      <span class="updated">Updated October 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="rail" aria-label="Page sections">
+  <ol>
+    <li><a href="#believe"><span>01</span>Learning</a></li>
+    <li><a href="#commitments"><span>02</span>Commitments</a></li>
+    <li><a href="#design"><span>03</span>Course Design</a></li>
+    <li><a href="#learn"><span>04</span>Still Learning</a></li>
+  </ol>
+</aside>
+<main id="main">
+<div class="wrap essay">
+
+<section class="cv" id="believe" aria-labelledby="h-believe">
+  <div class="sec-head"><div class="sec-num">01</div><h2 id="h-believe">What I Believe About Learning</h2></div>
+  <p>I came to teaching through the conviction that education is, at its best, a practice of liberation &mdash; one shaped by feminist, antiracist, and critical pedagogical traditions that have only deepened over twenty years in the classroom. bell hooks&rsquo; vision of education as the practice of freedom remains foundational for me, but so does a harder-won understanding: that learning is never a destination, and never politically neutral. I define learning as knowledge building that happens in relationships, between writers and texts, between students and communities, between ideas and the social conditions that make some ideas visible and others invisible. When students write, they are not producing artifacts for evaluation; they are enacting rhetorical choices that position them in the world. My job is to help them see that. Students are co-creators of knowledge, not passive consumers, and my classroom is designed around that premise: what students bring is as generative as what I bring, and the most powerful learning happens when we build something neither of us could have built alone. My institutional ethnography of the outcome statements filed by NC State&rsquo;s 336 programs, which showed how unevenly the university documents the communication it teaches, sharpened this commitment further: teaching with integrity requires alignment between stated values and the structures we build.</p>
+</section>
+
+<section class="cv" id="commitments" aria-labelledby="h-commitments">
+  <div class="sec-head"><div class="sec-num">02</div><h2 id="h-commitments">Pedagogical Commitments</h2></div>
+
+  <h3>Writing as Social and Rhetorical Practice</h3>
+  <p>Across all my courses, I teach writing as a social process constituted by audience, genre, context, and power. Rhetorical choices are never merely stylistic; they are epistemological, and they construct credibility, manage risk, and distribute authority. Generative AI makes this teaching more urgent, because a text now arrives without showing whose choices produced it. We examine together what it means to claim authorship in a moment when the claim is contested.</p>
+
+  <h3>AI Literacy as Rhetorical Judgment</h3>
+  <p>Writers have always thought with tools. Pen, paper, and language itself are part of how cognition works, so the writer who composes without mediation has never existed. I teach AI literacy from this premise, at three levels. At the conceptual level, students learn what these systems are and how they produce text. At the structural level, they examine bias, data dependency, and whose writing the tools misread or penalize, including multilingual and neurodivergent writers. At the operative level, they decide when to use a tool and when to refuse it, and they give reasons tied to what the assignment is meant to teach. My own classroom evidence shaped this design. Across two published assignments, students named what AI produced but not where their own thinking ended. I now build assignments around this missing decision, so students learn to locate themselves as agents inside the systems they write with. This work extends into my scholarship: I co-authored the AWAC Statement on AI Writing Tools and co-edited a special issue of the <em>Journal of Writing Research</em> on writing and generative AI with Chris Anson. In ENG 583: Multimodal Composition in Practice and CRD 704: Pedagogy and Communication Technologies, graduate students take up the same decision as future teachers, designing assignments in which use and refusal are both reasoned choices.</p>
+  <p>The evidence behind this approach is collected in <a href="https://cwspwolf.com/unmediated-writer.html" target="_blank" rel="noopener">The Unmediated Writer</a>, my session companion for the Carolinas WPA Fall Retreat, October 2026.</p>
+
+  <h3>Equity, Inclusion, and the Rhetorics of Difference</h3>
+  <p>Feminist, antiracist, and disability-informed frameworks are structural in my pedagogy, not supplementary. I design courses that foreground whose knowledge counts, who speaks with authority, and how writing instruction has historically served some students while marginalizing others. In ENG 422: Writing Theory and Writing Process, students examine how platform architectures encode ideological assumptions; in my Multimodal Composition seminar, they analyze and produce discourse centering embodiment, labor, and power. My own neurodivergent profile informs this work directly: standardized academic structures, fixed deadlines, timed performance, and lecture delivery serve some learners while creating unnecessary barriers for others. I build flexibility and transparency into my courses as a design principle, not an accommodation. This commitment also shapes my grant work: a recent proposal co-developed with Bethany Van Scooter for an &ldquo;AI Writing Studio for Neurodivergent and First-Generation Writers&rdquo; reflects my belief that writing support infrastructure should be designed with, not merely for, students whose cognitive and institutional histories are too often treated as deficits.</p>
+
+  <h3>Mentoring and Faculty Development</h3>
+  <p>My investment in graduate education runs through courses including ENG 511, ENG 583, and CRD 704, where I work with future faculty to develop sustained pedagogical inquiry: the capacity to design with intention, revise with evidence, and articulate a coherent theory of practice. This mentoring extends into explicit professional development and into faculty development across NC State through CWSP, which received the 2024 AWAC Award for Exemplary Enduring WAC Program. That work demands the same rhetorical agility I teach my students: meeting people where they are, adapting across disciplinary contexts, and making principled arguments for communicative learning in environments that do not always value it.</p>
+</section>
+
+<section class="cv" id="design" aria-labelledby="h-design">
+  <div class="sec-head"><div class="sec-num">03</div><h2 id="h-design">Course Design, Assessment, and Scholarly Integration</h2></div>
+  <p>My courses are built on the premise that students should understand why they are being asked to do what they are. I share the reasoning behind my pedagogical choices, invite students into conversations about criteria, and treat the syllabus as a living document. In practice: collaborative rubric development, metacognitive reflection, workshop-based peer review, and iterative drafting that treats revision as thinking rather than correction. In my online courses, for fifteen-plus years, I build asynchronous structures that maintain the communal, dialogic quality I value: students write to each other, co-construct frameworks, and engage in genuine intellectual exchange rather than content delivery. I integrate multimodal composition throughout because communication is irreducibly multimodal; students compose across genres and media, examining each modal choice rhetorically. Portfolio assessment organizes my undergraduate courses because writing develops recursively, and early work does not predict later capacity. I conference individually with students twice per semester, approaching those conversations as collaborative evaluation: we look together at the portfolio and make decisions jointly. For graduate students, end-of-semester reflections connect their learning to their emerging professional identities, rather than course evaluations, and position them within ongoing field conversations.</p>
+  <p>My research and teaching are the same project at different scales. My collaborative work on feminist rhetorics, including research on GLP-1 medication discourse and the politics of the &ldquo;deserving body,&rdquo; co-authored with Val Renegar, and a co-edited special issue of <em>Composition Studies</em> on writing program policy with Holly Hassel, informs the frameworks and questions I bring to students. My institutional ethnography methodology, which I have presented as a transferable WAC framework at venues including Write@UGA 2026, is one I explicitly teach to graduate students: reading your institutional context as carefully as you read your primary texts is not a supplementary skill. It is how teacher-scholars survive and advocate for good work.</p>
+</section>
+
+<section class="cv" id="learn" aria-labelledby="h-learn">
+  <div class="sec-head"><div class="sec-num">04</div><h2 id="h-learn">What I Continue to Learn</h2></div>
+  <p>The conditions of learning matter as much as the content: students need to feel seen, to have their prior knowledge honored, and to understand how their work connects to something beyond a grade. I have learned to build spaciousness into my courses &mdash; explicit invitations to struggle productively, transparent acknowledgment of institutional pressures, structural support for diverse cognitive profiles. My own neurodivergent profile is ongoing pedagogical knowledge: it keeps teaching me about the relationship between environment and capacity, and about what it means to design for freedom rather than compliance. The moment we are in, marked by AI&rsquo;s disruption of writing, contestation over whose knowledge belongs in the university, and deepening uncertainty about the purpose of higher education, demands continued learning. I try to approach it the way I ask my students to approach difficult texts: with curiosity, with rigor, and with the conviction that the discomfort of not-yet-knowing is where the most important work happens.</p>
+  <p class="signoff">Kirsti Cole &middot; <a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a> &middot; NC State University</p>
+</section>
+
+</div>
+</main>
+</div>
+
+<footer>
+  <div class="foot-name">Kirsti K. Cole, PhD</div>
+  <div class="foot-right">NC State University &middot; Raleigh, NC &middot; <a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a></div>
+</footer>
+<script>
+(function () {
+  var links = document.querySelectorAll('.rail a');
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        links.forEach(function (a) { a.removeAttribute('aria-current'); });
+        var a = map[e.target.id];
+        if (a) a.setAttribute('aria-current', 'true');
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  document.querySelectorAll('section.cv').forEach(function (sec) { io.observe(sec); });
+})();
+</script>
+</body>
+</html>
