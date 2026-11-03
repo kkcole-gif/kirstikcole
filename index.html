@@ -238,6 +238,12 @@ footer { background: var(--cobalt-deep); padding: 2rem 3rem; display: flex; just
   .contact-grid { grid-template-columns: 1fr; }
   .highlights-row { grid-template-columns: 1fr 1fr; }
 }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--cream); padding: .6rem 1rem; z-index: 400; text-decoration: none; }
+.skip:focus { left: 1rem; top: 1rem; }
+h1.hero-name, h2.section-title { margin: 0; }
+/* type floor: 14px at the 16px root (WCAG 2.1 AA pass, REG 04.25.05) */
+.nav-links a, .hero-meta, .tag, .stat-label, .sidebar-label, .rc-num, .rc-recent-label, .bt-year, .bt-pub, .article-yr, .forthcoming, .teaching-link, .cc-code, .pt-tag, .ct-label, .footer-right, .mobile-menu a, .back-to-top { font-size: 0.875rem; }
 </style>
 <style id="hilda-descent">
 /* Hilda Descent theme for kirstikcole.com
@@ -359,11 +365,18 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
   .course-card:last-child:nth-child(3n+1) { grid-column: auto; }
   .partnerships-grid { grid-template-columns: 1fr; }
 }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: -999px; top: 0; background: var(--ink); color: var(--cream); padding: .6rem 1rem; z-index: 400; text-decoration: none; }
+.skip:focus { left: 1rem; top: 1rem; }
+h1.hero-name, h2.section-title { margin: 0; }
+/* type floor: 14px at the 16px root (WCAG 2.1 AA pass, REG 04.25.05) */
+.nav-links a, .hero-meta, .tag, .stat-label, .sidebar-label, .rc-num, .rc-recent-label, .bt-year, .bt-pub, .article-yr, .forthcoming, .teaching-link, .cc-code, .pt-tag, .ct-label, .footer-right, .mobile-menu a, .back-to-top { font-size: 0.875rem; }
 </style>
 </head>
 <body>
+<a href="#main" class="skip">Skip to content</a>
 <!-- NAV -->
-<nav>
+<nav aria-label="Primary">
   <a href="#home" class="nav-name">Kirsti K. Cole</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -388,10 +401,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
 </div>
 
 <!-- HERO -->
-<section class="hero" id="home">
+<main id="main">
+<section class="hero" id="home" aria-labelledby="h-home">
   <div class="hero-left">
     <div class="hero-eyebrow">Professor of English &amp; Co-Director, CWSP · NC State University</div>
-    <div class="hero-name">KIRSTI K.<br><span>COLE</span></div>
+    <h1 class="hero-name" id="h-home">KIRSTI K.<br><span>COLE</span></h1>
     <div class="hero-tagline">Bridging Institutional Literacy, Feminist Pedagogy, and AI Ethics in Writing and Speaking</div>
     <div class="hero-meta">
       <strong>Co-Director</strong>, Campus Writing and Speaking Program<br>
@@ -435,11 +449,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
 </section>
 
 <!-- ABOUT -->
-<section class="about-section" id="about">
+<section class="about-section" id="about" aria-labelledby="h-about">
   <div class="container">
     <div class="section-header">
       <div class="section-num">01</div>
-      <div class="section-title">About</div>
+      <h2 class="section-title" id="h-about">About</h2>
     </div>
     <div class="about-grid">
       <div>
@@ -458,7 +472,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
           <div class="sidebar-value">
             Professor of English &amp; Co-Director<br>
             Campus Writing and Speaking Program<br>
-            <a href="https://chass.ncsu.edu/people/kkcole2/" target="_blank">NC State University</a>
+            <a href="https://chass.ncsu.edu/people/kkcole2/" target="_blank" rel="noopener">NC State University<span class="sr-only"> (opens in a new tab)</span></a>
             <span style="display:block; color:var(--ink-light); font-size:0.78rem; margin-top:0.2rem;">2023–present</span>
           </div>
         </div>
@@ -485,13 +499,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
         <div class="sidebar-block">
           <div class="sidebar-label">Program Website</div>
           <div class="sidebar-value">
-            <a href="https://cwspwolf.com/" target="_blank">WOLF — Written and Oral Literacy Facilitation →</a><br>
+            <a href="https://cwspwolf.com/" target="_blank" rel="noopener">WOLF: Written and Oral Literacy Facilitation →<span class="sr-only"> (opens in a new tab)</span></a><br>
             <span style="font-size:0.78rem; color:var(--ink-light);">CWSP's faculty development program for building communication-rich courses across disciplines, including the Communication Teaching Certificate (C2TC) and AI Policy Lab.</span>
           </div>
         </div>
         <div class="sidebar-block">
           <div class="sidebar-label">Office Hours</div>
-          <div class="sidebar-value"><a href="https://calendar.app.google/jJxfNenMUunjbBXy8" target="_blank">Book an appointment →</a></div>
+          <div class="sidebar-value"><a href="https://calendar.app.google/jJxfNenMUunjbBXy8" target="_blank" rel="noopener">Book an appointment →<span class="sr-only"> (opens in a new tab)</span></a></div>
         </div>
         <div class="sidebar-block">
           <div class="sidebar-label">Contact</div>
@@ -503,11 +517,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
 </section>
 
 <!-- RESEARCH -->
-<section class="research-section" id="research">
+<section class="research-section" id="research" aria-labelledby="h-research">
   <div class="container">
     <div class="section-header">
       <div class="section-num">02</div>
-      <div class="section-title">Research</div>
+      <h2 class="section-title" id="h-research">Research</h2>
     </div>
     <p class="section-intro">Composing Change: Institutional Ethnography, Feminist Inquiry, and Digital Futures</p>
     <div class="research-areas">
@@ -527,7 +541,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
       <div class="research-card">
         <div class="rc-num">Area 02</div>
         <div class="rc-title">Feminist Rhetorics &amp; Alternative Motherhood</div>
-        <div class="rc-body">My feminist rhetorical scholarship investigates how motherhood — particularly non-normative and stepmother identities — is represented in political discourse, media, and cultural narratives, and how feminist theory can inform institutional practice and leadership.</div>
+        <div class="rc-body">My feminist rhetorical scholarship investigates how motherhood, particularly non-normative and stepmother identities, is represented in political discourse, media, and cultural narratives, and how feminist theory can inform institutional practice and leadership.</div>
         <div class="rc-recent">
           <div class="rc-recent-label">Recent Work</div>
           <ul>
@@ -570,7 +584,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
         <div>
           <div class="rc-num">Area 05</div>
           <div class="rc-title">Health, Medical Humanities &amp; Communication of Science</div>
-          <div class="rc-body">This scholarship examines how medical and scientific knowledge is produced, contested, and communicated across professional, public, and activist spheres. Working at the intersection of feminist theory, rhetorical analysis, and health communication, I trace how institutions, practitioners, and patients navigate expertise, trust, and discourse — and how misinformation circulates in digital environments.</div>
+          <div class="rc-body">This scholarship examines how medical and scientific knowledge is produced, contested, and communicated across professional, public, and activist spheres. Working at the intersection of feminist theory, rhetorical analysis, and health communication, I trace how institutions, practitioners, and patients navigate expertise, trust, and discourse, and how misinformation circulates in digital environments.</div>
         </div>
         <div>
           <div class="rc-recent" style="border-top: none; padding-top: 0;">
@@ -579,7 +593,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
               <li><em>Bad Ideas about Scientific Writing</em> (with Kristin Bivens), under consideration, WAC Clearinghouse</li>
               <li>Cole &amp; Wagner. "Crisis Pregnancy Centers: Digital Rhetoric, Misinformation, and Trust." In <em>Trust under Threat</em> (Waxmann Verlag, 2024)</li>
               <li>Bivens, Cole &amp; Koerber. "Activism by Accuracy: Women's Health and Hormonal Birth Control." In <em>Women's Health Advocacy</em> (Routledge, 2020)</li>
-              <li>Graduate Certificate — Medical Writing &amp; Editing, University of Chicago (2021)</li>
+              <li>Graduate Certificate in Medical Writing &amp; Editing, University of Chicago (2021)</li>
             </ul>
           </div>
         </div>
@@ -598,13 +612,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
         <div class="bt-title">Bad Ideas about Scientific Writing</div>
         <div class="bt-pub">WAC Clearinghouse · with Kristin Bivens</div>
       </div>
-      <div class="book-tile"><a href="https://www.routledge.com/Reimagining-Graduate-Education-in-Writing-Studies-Sustainable-Equitable-and-Inclusive-Approaches/Cole-HendersonLee/p/book/9781041134695" target="_blank"><div class="bt-year">2026</div><div class="bt-title">Reimagining Graduate Education in Writing Studies</div><div class="bt-pub">Routledge · with Sarah Henderson Lee</div></a></div>
-      <div class="book-tile"><a href="https://www.routledge.com/A-Faculty-Guidebook-for-Effective-Shared-Governance-and-Service-in-Higher-Education/Cole-Giordano-Hassel/p/book/9781032191706" target="_blank"><div class="bt-year">2023</div><div class="bt-title">A Faculty Guidebook for Effective Shared Governance and Service in Higher Education</div><div class="bt-pub">Routledge · with Holly Hassel &amp; Joanne Giordano</div></a></div>
-      <div class="book-tile"><a href="https://www.routledge.com/Refiguring-Motherhood-Beyond-Biology/Renegar-Cole/p/book/9781032318660" target="_blank"><div class="bt-year">2023</div><div class="bt-title">Refiguring Motherhood Beyond Biology</div><div class="bt-pub">Routledge · with Valerie Renegar</div></a></div>
-      <div class="book-tile"><a href="https://upcolorado.com/utah-state-university-press/transformations" target="_blank"><div class="bt-year">2021</div><div class="bt-title">Transformations: Change Work Across Writing Programs, Pedagogies, and Practices</div><div class="bt-pub">Utah State UP · with Holly Hassel</div></a></div>
-      <div class="book-tile"><a href="https://www.routledge.com/Academic-Labor-Beyond-the-College-Classroom-Working-for-Our-Values/Hassel-Cole/p/book/9780367313227" target="_blank"><div class="bt-year">2019</div><div class="bt-title">Academic Labor Beyond the Classroom: Working for our Values</div><div class="bt-pub">Routledge · with Holly Hassel</div></a></div>
-      <div class="book-tile"><a href="https://www.routledge.com/Surviving-Sexism-in-Academia-Strategies-for-Feminist-Leadership/Cole-Hassel/p/book/9781138696846" target="_blank"><div class="bt-year">2017</div><div class="bt-title">Surviving Sexism in Academia: Strategies for Feminist Leadership</div><div class="bt-pub">Routledge · with Holly Hassel</div></a></div>
-      <div class="book-tile"><a href="https://www.cambridgescholars.com/product/978-1-4438-5501-3" target="_blank"><div class="bt-year">2014</div><div class="bt-title">Feminist Challenges or Feminist Rhetorics?: Locations, Scholarship, and Discourse</div><div class="bt-pub">Cambridge Scholars Press</div></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/Reimagining-Graduate-Education-in-Writing-Studies-Sustainable-Equitable-and-Inclusive-Approaches/Cole-HendersonLee/p/book/9781041134695" target="_blank" rel="noopener"><div class="bt-year">2026</div><div class="bt-title">Reimagining Graduate Education in Writing Studies</div><div class="bt-pub">Routledge · with Sarah Henderson Lee</div><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/A-Faculty-Guidebook-for-Effective-Shared-Governance-and-Service-in-Higher-Education/Cole-Giordano-Hassel/p/book/9781032191706" target="_blank" rel="noopener"><div class="bt-year">2023</div><div class="bt-title">A Faculty Guidebook for Effective Shared Governance and Service in Higher Education</div><div class="bt-pub">Routledge · with Holly Hassel &amp; Joanne Giordano</div><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/Refiguring-Motherhood-Beyond-Biology/Renegar-Cole/p/book/9781032318660" target="_blank" rel="noopener"><div class="bt-year">2023</div><div class="bt-title">Refiguring Motherhood Beyond Biology</div><div class="bt-pub">Routledge · with Valerie Renegar</div><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="book-tile"><a href="https://upcolorado.com/utah-state-university-press/transformations" target="_blank" rel="noopener"><div class="bt-year">2021</div><div class="bt-title">Transformations: Change Work Across Writing Programs, Pedagogies, and Practices</div><div class="bt-pub">Utah State UP · with Holly Hassel</div><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/Academic-Labor-Beyond-the-College-Classroom-Working-for-Our-Values/Hassel-Cole/p/book/9780367313227" target="_blank" rel="noopener"><div class="bt-year">2019</div><div class="bt-title">Academic Labor Beyond the Classroom: Working for our Values</div><div class="bt-pub">Routledge · with Holly Hassel</div><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="book-tile"><a href="https://www.routledge.com/Surviving-Sexism-in-Academia-Strategies-for-Feminist-Leadership/Cole-Hassel/p/book/9781138696846" target="_blank" rel="noopener"><div class="bt-year">2017</div><div class="bt-title">Surviving Sexism in Academia: Strategies for Feminist Leadership</div><div class="bt-pub">Routledge · with Holly Hassel</div><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="book-tile"><a href="https://www.cambridgescholars.com/product/978-1-4438-5501-3" target="_blank" rel="noopener"><div class="bt-year">2014</div><div class="bt-title">Feminist Challenges or Feminist Rhetorics?: Locations, Scholarship, and Discourse</div><div class="bt-pub">Cambridge Scholars Press</div><span class="sr-only"> (opens in a new tab)</span></a></div>
     </div>
 
     <div class="pubs-divider">Guest-Edited Special Issues</div>
@@ -612,40 +626,40 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
       <div class="special-issue-tile">
         <div class="bt-year">Summer 2026 · 54.2</div>
         <div class="bt-title">"When Words Become Work: How Do We Turn Position Statements Into Institutional Action?"</div>
-        <div class="bt-pub" style="font-family: var(--mono); font-size: 0.62rem; color: var(--ink-light); line-height: 1.6; margin-top: 0.35rem;"><em>Composition Studies</em> 54.2 · Special Digital Issue · Guest Editors: Kirsti Cole &amp; Holly Hassel · <a href="https://compstudiesjournal.com/current-issue-summer-2026-54-2/" target="_blank" style="color: var(--cobalt);">View issue →</a></div>
+        <div class="bt-pub" style="font-family: var(--mono); font-size: 0.875rem; color: var(--ink-light); line-height: 1.6; margin-top: 0.35rem;"><em>Composition Studies</em> 54.2 · Special Digital Issue · Guest Editors: Kirsti Cole &amp; Holly Hassel · <a href="https://compstudiesjournal.com/current-issue-summer-2026-54-2/" target="_blank" rel="noopener" style="color: var(--cobalt);">View issue →<span class="sr-only"> (opens in a new tab)</span></a></div>
       </div>
       <div class="special-issue-tile">
         <div class="bt-year">February 2026</div>
         <div class="bt-title">"Empirical Studies of Writing and Generative AI"</div>
-        <div class="bt-pub" style="font-family: var(--mono); font-size: 0.62rem; color: var(--ink-light); line-height: 1.6; margin-top: 0.35rem;"><em>Journal of Writing Research</em> 17.3 · Guest Editors: Chris Anson &amp; Kirsti Cole · <a href="https://www.jowr.org/jowr/issue/view/168" target="_blank" style="color: var(--cobalt);">View issue →</a></div>
+        <div class="bt-pub" style="font-family: var(--mono); font-size: 0.875rem; color: var(--ink-light); line-height: 1.6; margin-top: 0.35rem;"><em>Journal of Writing Research</em> 17.3 · Guest Editors: Chris Anson &amp; Kirsti Cole · <a href="https://www.jowr.org/jowr/issue/view/168" target="_blank" rel="noopener" style="color: var(--cobalt);">View issue →<span class="sr-only"> (opens in a new tab)</span></a></div>
       </div>
     </div>
 
     <div class="pubs-divider">Selected Articles</div>
     <ul class="articles-list">
-      <li class="article-item"><span class="article-yr">—</span><span>Cole. "AI Literacy Is Not One Thing: Conceptual, Structural, and Operative Levels for Higher Education Governance." <em>Pedagogies</em>.<span class="forthcoming review">under review</span></span></li>
+      <li class="article-item"><span class="article-yr">n.d.</span><span>Cole. "AI Literacy Is Not One Thing: Conceptual, Structural, and Operative Levels for Higher Education Governance." <em>Pedagogies</em>.<span class="forthcoming review">under review</span></span></li>
       <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Anson. "The Labor of Strategic Translation: Writing Programs and the Politics of Institutional Language." <em>College Composition and Communication</em>.<span class="forthcoming">forthcoming</span></span></li>
       <li class="article-item"><span class="article-yr">2026</span><span>Cole, Hassel, et al. "Strategic Friction: Writing and Literacy Programs and the Acceleration Imperative." <em>WPA Journal</em>.<span class="forthcoming">forthcoming</span></span></li>
       <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Renegar. "Discursive Archetypes: Kamala Harris and Repositioning Stepmotherhood." <em>Peitho</em>.<span class="forthcoming">forthcoming</span></span></li>
-      <li class="article-item"><span class="article-yr">2026</span><span>Cole, Hassel, Felber, Kim, Libertz, Wooten &amp; Pavesich. "From Position to Practice: An Introduction to When Words Become Work." <em>Composition Studies</em> 54.2. <a href="https://compstudiesjournal.com/current-issue-summer-2026-54-2/" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2026</span><span>Cole. "Cyborg Composing and Posthuman Research Methods." <em>TextGenEd Continuing Experiments</em>, August 2026. <a href="https://wacclearinghouse.org/repository/collections/continuing-experiments/august-2026/ai-literacy/cyborg-composing/" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2026</span><span>Schwartzman &amp; Cole. "A Modest Futurist Manifesto for Reimagining Communication Centers in a Critical AI Landscape." <em>Communication Center Journal</em> 11(1). <a href="https://janeway.uncpress.org/ccj/article/id/3146/" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2025</span><span>Cole, Van Scooter, et al. "Reflective Multimodal Feedback Practices in Human and AI Writing Contexts." <em>TextGenEd Continuing Experiments</em>. <a href="https://wacclearinghouse.org/repository/collections/continuing-experiments/august-2025/rhetorical-engagements/reflective-multimodal-feedback-practices-across-writing-contexts/" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2019</span><span>Renegar &amp; Cole. "'Evil is Part of the Territory': Inventing the Stepmother in Self-Help Books." <em>Women's Studies in Communication</em>. <a href="https://doi.org/10.1080/07491409.2019.1660745" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2020</span><span>Bivens, Cole &amp; Heilig. "The Activist Syllabus as Technical Communication and the Technical Communicator as Curator of Public Intellectualism." <em>Technical Communication Quarterly</em>. <a href="https://doi.org/10.1080/10572252.2019.1635211" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2015</span><span>Cole. "'It's Like She's Eager to be Verbally Abused:' Twitter, Trolls, and (En)gendering Disciplinary Rhetoric." <em>Feminist Media Studies</em> 15.2. <a href="https://doi.org/10.1080/14680777.2015.1008750" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Cole, Hassel, Felber, Kim, Libertz, Wooten &amp; Pavesich. "From Position to Practice: An Introduction to When Words Become Work." <em>Composition Studies</em> 54.2. <a href="https://compstudiesjournal.com/current-issue-summer-2026-54-2/" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Cole. "Cyborg Composing and Posthuman Research Methods." <em>TextGenEd Continuing Experiments</em>, August 2026. <a href="https://wacclearinghouse.org/repository/collections/continuing-experiments/august-2026/ai-literacy/cyborg-composing/" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Schwartzman &amp; Cole. "A Modest Futurist Manifesto for Reimagining Communication Centers in a Critical AI Landscape." <em>Communication Center Journal</em> 11(1). <a href="https://janeway.uncpress.org/ccj/article/id/3146/" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2025</span><span>Cole, Van Scooter, et al. "Reflective Multimodal Feedback Practices in Human and AI Writing Contexts." <em>TextGenEd Continuing Experiments</em>. <a href="https://wacclearinghouse.org/repository/collections/continuing-experiments/august-2025/rhetorical-engagements/reflective-multimodal-feedback-practices-across-writing-contexts/" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2019</span><span>Renegar &amp; Cole. "'Evil is Part of the Territory': Inventing the Stepmother in Self-Help Books." <em>Women's Studies in Communication</em>. <a href="https://doi.org/10.1080/07491409.2019.1660745" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2020</span><span>Bivens, Cole &amp; Heilig. "The Activist Syllabus as Technical Communication and the Technical Communicator as Curator of Public Intellectualism." <em>Technical Communication Quarterly</em>. <a href="https://doi.org/10.1080/10572252.2019.1635211" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2015</span><span>Cole. "'It's Like She's Eager to be Verbally Abused:' Twitter, Trolls, and (En)gendering Disciplinary Rhetoric." <em>Feminist Media Studies</em> 15.2. <a href="https://doi.org/10.1080/14680777.2015.1008750" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
     </ul>
 
     <div class="pubs-divider" style="margin-top: 3rem;">Selected Book Chapters</div>
     <ul class="articles-list">
       <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Van Scooter. "Navigating Visibility Matrices: Institutional Literacy and Contingent Labor in Writing Programs." In <em>Precarious Pedagogies</em>. University of Colorado Press.<span class="forthcoming">forthcoming</span></span></li>
       <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Van Scooter. "Running on Coffee, Guilt, and Calendar Reminders: Neurodivergent Academic Motherhood Across Career Stages." In <em>Narratives of Persistence and Survival</em>. Lexington Books.<span class="forthcoming">forthcoming</span></span></li>
-      <li class="article-item"><span class="article-yr">2026</span><span>Cole. "A Writing Studies Approach to AI Literacy: Writing Theory and Writing Process (ENG 422)." In <em>Teaching AI: Syllabi, Pedagogy, and Best Practices in Higher Education</em>. EdTech Books. <a href="https://doi.org/10.59668/2869.30070" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2026</span><span>Anson &amp; Cole. "Generative AI Does All the Work for the Writer: Writing with AI Requires Human Rhetorical Agency." In <em>Bad Ideas about AI and Writing</em>, pp. 119&ndash;28. WAC Clearinghouse. <a href="https://doi.org/10.37514/PER-B.2026.2777.2.15" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →</a></span></li>
-      <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Henderson Lee. "Creating Collaborative Conditions." In <em>Reimagining Graduate Education in Writing Studies</em>. Routledge. <a href="https://www.routledge.com/Reimagining-Graduate-Education-in-Writing-Studies-Sustainable-Equitable-and-Inclusive-Approaches/Cole-HendersonLee/p/book/9781041134695" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Publisher page →</a></span></li>
-      <li class="article-item"><span class="article-yr">2024</span><span>Cole &amp; Wagner. "Crisis Pregnancy Centers: Digital Rhetoric, Misinformation, and Trust." In <em>Trust under Threat</em>. Waxmann Verlag. <a href="https://doi.org/10.31244/9783830998532" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Open access →</a></span></li>
-      <li class="article-item"><span class="article-yr">2023</span><span>Moreland, Lee &amp; Cole. "(E)merging Expertise: Multivocal, Multimodal Preparation of Graduate Teaching Assistants." In <em>Professionalizing Multimodal Composition</em>. Utah State UP. <a href="https://upcolorado.com/utah-state-university-press/professionalizing-multimodal-composition" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Publisher page →</a></span></li>
-      <li class="article-item"><span class="article-yr">2020</span><span>Bivens, Cole &amp; Koerber. "Activism by Accuracy: Women's Health and Hormonal Birth Control." In <em>Women's Health Advocacy</em>. Routledge. <a href="https://www.routledge.com/products/9780367192242" target="_blank" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Publisher page →</a></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Cole. "A Writing Studies Approach to AI Literacy: Writing Theory and Writing Process (ENG 422)." In <em>Teaching AI: Syllabi, Pedagogy, and Best Practices in Higher Education</em>. EdTech Books. <a href="https://doi.org/10.59668/2869.30070" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Anson &amp; Cole. "Generative AI Does All the Work for the Writer: Writing with AI Requires Human Rhetorical Agency." In <em>Bad Ideas about AI and Writing</em>, pp. 119&ndash;28. WAC Clearinghouse. <a href="https://doi.org/10.37514/PER-B.2026.2777.2.15" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Read online →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2026</span><span>Cole &amp; Henderson Lee. "Creating Collaborative Conditions." In <em>Reimagining Graduate Education in Writing Studies</em>. Routledge. <a href="https://www.routledge.com/Reimagining-Graduate-Education-in-Writing-Studies-Sustainable-Equitable-and-Inclusive-Approaches/Cole-HendersonLee/p/book/9781041134695" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Publisher page →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2024</span><span>Cole &amp; Wagner. "Crisis Pregnancy Centers: Digital Rhetoric, Misinformation, and Trust." In <em>Trust under Threat</em>. Waxmann Verlag. <a href="https://doi.org/10.31244/9783830998532" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Open access →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2023</span><span>Moreland, Lee &amp; Cole. "(E)merging Expertise: Multivocal, Multimodal Preparation of Graduate Teaching Assistants." In <em>Professionalizing Multimodal Composition</em>. Utah State UP. <a href="https://upcolorado.com/utah-state-university-press/professionalizing-multimodal-composition" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Publisher page →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
+      <li class="article-item"><span class="article-yr">2020</span><span>Bivens, Cole &amp; Koerber. "Activism by Accuracy: Women's Health and Hormonal Birth Control." In <em>Women's Health Advocacy</em>. Routledge. <a href="https://www.routledge.com/products/9780367192242" target="_blank" rel="noopener" style="color:var(--cobalt); border-bottom: 1px solid var(--mint-300);">Publisher page →<span class="sr-only"> (opens in a new tab)</span></a></span></li>
     </ul>
 
     <div class="pubs-divider" style="margin-top: 3rem;">Selected Funding</div>
@@ -660,18 +674,18 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
 </section>
 
 <!-- TEACHING -->
-<section class="teaching-section" id="teaching">
+<section class="teaching-section" id="teaching" aria-labelledby="h-teaching">
   <div class="container">
     <div class="section-header">
       <div class="section-num">03</div>
-      <div class="section-title">Teaching</div>
+      <h2 class="section-title" id="h-teaching">Teaching</h2>
     </div>
     <p class="section-intro">Pedagogy Grounded in Practice, Equity, and Rhetorical Agility</p>
     <div class="teaching-grid">
       <div>
         <div class="teaching-pull">Students are not just learners, but co-creators of knowledge.</div>
         <div class="teaching-body">
-          <p>I teach with the conviction that writing is never neutral — it shapes who we are, how we are perceived, and how we navigate the world. Across undergraduate and graduate levels, I design courses that foreground rhetorical awareness, student agency, and the social dimensions of writing.</p>
+          <p>I teach with the conviction that writing is never neutral, since it shapes who we are, how we are perceived, and how we navigate the world. Across undergraduate and graduate levels, I design courses that foreground rhetorical awareness, student agency, and the social dimensions of writing.</p>
           <p>My teaching is grounded in feminist, inclusive, and antiracist pedagogies that equip students to engage critically and creatively with their academic, civic, and professional communities. I integrate multimodal composition, digital tools, and AI literacy into my curriculum, emphasizing ethical use and critical reflection.</p>
           <p>I also invest deeply in mentoring graduate instructors and future faculty, modeling collaborative curriculum design and sustained pedagogical inquiry. I direct two doctoral dissertations, and in Fall 2026 I lead independent studies in cultural rhetorics (ENG 636) and AI literacy (CRD 810).</p>
           <p style="margin-top:1.5rem"><a href="teaching.html" class="teaching-link">Read full teaching philosophy →</a></p>
@@ -699,19 +713,19 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
 </section>
 
 <!-- CONSULTING -->
-<section class="consulting-section" id="consulting">
+<section class="consulting-section" id="consulting" aria-labelledby="h-consulting">
   <div class="container">
     <div class="section-header">
       <div class="section-num">04</div>
-      <div class="section-title">Consulting</div>
+      <h2 class="section-title" id="h-consulting">Consulting</h2>
     </div>
     <p class="consulting-intro">I partner with faculty, departments, writing programs, and institutional leaders to co-develop responsive, research-driven communication strategies that foster equity, effectiveness, and sustainability. Through hands-on workshops, institutional partnerships, and project-based consulting, I help individuals and organizations design initiatives that are rhetorically sound, evidence-based, and truly transformative.</p>
     <div class="services-grid">
-      <div class="service-card"><div class="svc-mark">✎</div><div class="svc-name">WAC / WEC Curriculum Design</div><div class="svc-desc">Facilitating department- and program-level curriculum integration using inclusive, discipline-specific approaches to writing and speaking. See <a href="https://cwspwolf.com/" target="_blank" style="color:var(--teal-deep); border-bottom:1px solid var(--mint-300); text-decoration:none;">WOLF</a> for an example of this work in practice.</div></div>
-      <div class="service-card"><div class="svc-mark">◈</div><div class="svc-name">Ethical GenAI &amp; AI Literacy</div><div class="svc-desc">Guiding ethical, equitable, and accessible approaches to generative AI in classrooms, writing centers, and institutional policy.</div></div>
-      <div class="service-card"><div class="svc-mark">◎</div><div class="svc-name">Faculty Development</div><div class="svc-desc">Designing workshops, retreats, and asynchronous modules that support sustained, reflective communication instruction — including workplace communication series for industry partners.</div></div>
-      <div class="service-card"><div class="svc-mark">▦</div><div class="svc-name">Institutional Research &amp; Visual Storytelling</div><div class="svc-desc">Translating data into narrative through institutional ethnography and visual reporting for program review, grants, and redesign.</div></div>
-      <div class="service-card"><div class="svc-mark">◇</div><div class="svc-name">Feminist Leadership &amp; Governance</div><div class="svc-desc">Supporting leadership grounded in feminist ethics, transparency, and shared responsibility, tailored to departments and administrators.</div></div>
+      <div class="service-card"><div class="svc-mark" aria-hidden="true">✎</div><div class="svc-name">WAC / WEC Curriculum Design</div><div class="svc-desc">Facilitating department- and program-level curriculum integration using inclusive, discipline-specific approaches to writing and speaking. See <a href="https://cwspwolf.com/" target="_blank" rel="noopener" style="color:var(--teal-deep); border-bottom:1px solid var(--mint-300); text-decoration:none;">WOLF<span class="sr-only"> (opens in a new tab)</span></a> for an example of this work in practice.</div></div>
+      <div class="service-card"><div class="svc-mark" aria-hidden="true">◈</div><div class="svc-name">Ethical GenAI &amp; AI Literacy</div><div class="svc-desc">Guiding ethical, equitable, and accessible approaches to generative AI in classrooms, writing centers, and institutional policy.</div></div>
+      <div class="service-card"><div class="svc-mark" aria-hidden="true">◎</div><div class="svc-name">Faculty Development</div><div class="svc-desc">Designing workshops, retreats, and asynchronous modules that support sustained, reflective communication instruction, including workplace communication series for industry partners.</div></div>
+      <div class="service-card"><div class="svc-mark" aria-hidden="true">▦</div><div class="svc-name">Institutional Research &amp; Visual Storytelling</div><div class="svc-desc">Translating data into narrative through institutional ethnography and visual reporting for program review, grants, and redesign.</div></div>
+      <div class="service-card"><div class="svc-mark" aria-hidden="true">◇</div><div class="svc-name">Feminist Leadership &amp; Governance</div><div class="svc-desc">Supporting leadership grounded in feminist ethics, transparency, and shared responsibility, tailored to departments and administrators.</div></div>
     </div>
     <div class="partnerships-grid">
       <div class="partner-tile">
@@ -730,13 +744,13 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
         <div class="pt-tag">Program</div>
         <div class="pt-name">CWSP WOLF</div>
         <div class="pt-collab">With Dr. Roy Schwartzman · NC State University</div>
-        <p class="pt-body">WOLF — Written and Oral Literacy Facilitation — is CWSP's faculty development program, pairing faculty with trained liaisons to audit communication practices, design scaffolded assignments, and build evidence of student learning. The program runs in three phases and adapts to any discipline, from first-year writing to capstone courses.</p>
+        <p class="pt-body">WOLF, Written and Oral Literacy Facilitation, is CWSP's faculty development program, pairing faculty with trained liaisons to audit communication practices, design scaffolded assignments, and build evidence of student learning. The program runs in three phases and adapts to any discipline, from first-year writing to capstone courses.</p>
         <ul class="pt-list">
           <li>Faculty liaison partnerships for course and assignment redesign</li>
           <li>Department-level communication curriculum audits</li>
-          <li>Communication Teaching Certificate (C2TC) — written, digital, oral, and AI modules</li>
+          <li>Communication Teaching Certificate (C2TC): written, digital, oral, and AI modules</li>
           <li>AI Policy Lab workshop facilitation</li>
-          <li><a href="https://cwspwolf.com/" target="_blank" style="color:var(--teal-deep); text-decoration:none; border-bottom:1px solid var(--mint-300);">Visit cwspwolf.com →</a></li>
+          <li><a href="https://cwspwolf.com/" target="_blank" rel="noopener" style="color:var(--teal-deep); text-decoration:none; border-bottom:1px solid var(--mint-300);">Visit cwspwolf.com →<span class="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
       </div>
       <div class="partner-tile">
@@ -757,21 +771,22 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--teal); outline-
 </section>
 
 <!-- CONTACT -->
-<section class="contact-section" id="contact">
+<section class="contact-section" id="contact" aria-labelledby="h-contact">
   <div class="container">
     <div class="section-header">
       <div class="section-num">05</div>
-      <div class="section-title">Contact</div>
+      <h2 class="section-title" id="h-contact">Contact</h2>
     </div>
     <div class="contact-tagline">Let's work together.</div>
     <div class="contact-grid">
       <a href="mailto:kkcole2@ncsu.edu" class="contact-tile"><div class="ct-label">Email</div><div class="ct-value">kkcole2@ncsu.edu</div></a>
-      <a href="https://calendar.app.google/jJxfNenMUunjbBXy8" target="_blank" class="contact-tile"><div class="ct-label">Office Hours</div><div class="ct-value">Book an appointment →</div></a>
-      <a href="https://chass.ncsu.edu/people/kkcole2/" target="_blank" class="contact-tile"><div class="ct-label">NC State Profile</div><div class="ct-value">CHASS Faculty Page →</div></a>
+      <a href="https://calendar.app.google/jJxfNenMUunjbBXy8" target="_blank" rel="noopener" class="contact-tile"><div class="ct-label">Office Hours</div><div class="ct-value">Book an appointment →</div><span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://chass.ncsu.edu/people/kkcole2/" target="_blank" rel="noopener" class="contact-tile"><div class="ct-label">NC State Profile</div><div class="ct-value">CHASS Faculty Page →</div><span class="sr-only"> (opens in a new tab)</span></a>
       <a href="cv.html" class="contact-tile"><div class="ct-label">Curriculum Vitae</div><div class="ct-value">View CV →</div></a>
     </div>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="footer-name">Kirsti K. Cole, PhD</div>
