@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Governance Census | Kirsti K. Cole, PhD</title>
+<meta name="description" content="A stratified census of the documents through which US colleges and universities govern artificial intelligence, directed by Kirsti K. Cole, North Carolina State University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/neue-machina" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  /* Hilda Daylight, teal register: distinct from the main site's cream and the CV's parchment */
+  --white: #FFFFFF; --mist: #C3D6CE; --mist-soft: #E6EFEB; --cream: #FCF7E9; --gold: #F1C476;
+  --umber: #41292B; --ink-mid: #5A4446; --deep-teal: #457877; --teal-dark: #35605F; --forest: #4C8174;
+  --red: #C22627; --deep-red: #891A17; --rule: #D5E2DC;
+  --display: 'Neue Machina', 'DM Sans', sans-serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+html { font-size: 17px; }
+body { background: var(--white); color: var(--umber); font-family: var(--sans); font-weight: 400; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+a { color: var(--teal-dark); text-decoration: none; border-bottom: 1px solid var(--deep-teal); }
+a:hover { color: var(--deep-red); border-color: var(--deep-red); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+nav { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.97); border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; padding: 0 3rem; height: 52px; }
+nav a { border: none; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--umber); }
+nav a:hover { color: var(--deep-teal); }
+.nav-name { font-family: var(--display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; color: var(--teal-dark); }
+
+.hero { background: var(--mist); color: var(--umber); padding: 4.5rem 3rem 3.5rem; border-bottom: 4px solid var(--deep-teal); }
+.hero-inner { max-width: 860px; margin: 0 auto; }
+.eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 1rem; font-weight: 500; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2.1rem, 5vw, 3.4rem); line-height: 1.1; margin-bottom: 1.25rem; color: var(--umber); }
+.lede { font-size: 1.1rem; max-width: 700px; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.btn { display: inline-block; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.7rem 1.1rem; border: 1px solid var(--teal-dark); color: var(--teal-dark); background: var(--white); }
+.btn:hover { background: var(--teal-dark); color: var(--white); border-color: var(--teal-dark); }
+.btn.primary { background: var(--deep-teal); border-color: var(--deep-teal); color: var(--white); }
+.btn.primary:hover { background: var(--teal-dark); border-color: var(--teal-dark); color: var(--white); }
+.doi { display: inline-block; margin-top: 1.75rem; font-family: var(--mono); font-size: 0.8rem; color: var(--umber); background: var(--gold); padding: 0.3rem 0.6rem; border: none; }
+.doi:hover { color: var(--umber); background: var(--cream); }
+
+main { width: min(860px, calc(100% - 6rem)); margin: 0 auto; padding: 3.5rem 0 4rem; }
+section + section { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--rule); }
+h2 { font-family: var(--display); font-weight: 700; font-size: 1.35rem; margin-bottom: 1rem; color: var(--teal-dark); }
+p + p { margin-top: 1rem; }
+.status { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.stat { background: var(--mist-soft); border-top: 4px solid var(--deep-teal); padding: 1rem 1.1rem; }
+.stat b { display: block; font-family: var(--display); font-size: 1.6rem; color: var(--umber); }
+.stat span { font-size: 0.88rem; color: var(--ink-mid); }
+.links { list-style: none; margin-top: 0.5rem; }
+.links li { padding: 0.6rem 0; border-bottom: 1px solid var(--rule); }
+.links li:last-child { border-bottom: none; }
+.cite { background: var(--mist-soft); border-left: 4px solid var(--deep-teal); padding: 1.1rem 1.25rem; font-size: 0.95rem; margin-top: 1rem; }
+.small { font-size: 0.85rem; color: var(--ink-mid); margin-top: 0.75rem; }
+
+footer { background: var(--umber); color: var(--cream); padding: 2rem 3rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.05em; }
+footer a { color: var(--cream); border-color: var(--mist); }
+footer a:hover { color: var(--gold); border-color: var(--gold); }
+
+@media (max-width: 700px) {
+  nav, .hero, footer { padding-left: 16px; padding-right: 16px; }
+  main { width: calc(100% - 32px); }
+  .hero { padding-top: 3rem; padding-bottom: 3rem; }
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Site">
+  <a href="/" class="nav-name">Kirsti K. Cole</a>
+  <a href="/#research">Research</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Current project</p>
+    <h1>AI Governance Census of US Colleges and Universities</h1>
+    <p class="lede">The AI Governance Census records the documents through which US colleges and universities govern the use of artificial intelligence by students, faculty, and staff. Its sample of 334 institutions comes from the 2025 Carnegie Classifications. Every R1 institution is included, and institutions in the other strata are drawn at random.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://kkcole-gif.github.io/ai-governance-census/">Open the census</a>
+      <a class="btn" href="https://github.com/kkcole-gif/ai-governance-census">Data on GitHub</a>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfK8B4oqRNt_kNkRTaDm8G2Kt-vkDXZmajS4jcLUX75kF_O6w/viewform">Report a correction</a>
+    </div>
+    <a class="doi" href="https://doi.org/10.5281/zenodo.23887259">DOI 10.5281/zenodo.23887259</a>
+  </div>
+</header>
+
+<main>
+  <section aria-labelledby="what">
+    <h2 id="what">What a row is</h2>
+    <p>Each row is one document, and documents nest within institutions. A single university often governs AI through a provost memo, an honor code clause, a teaching center page, an IT standard, a library guide, a license announcement, and several school policies at once. The census keeps each of these as its own row, with the office that issued it, the readers it addresses, its dates, and a passage quoted from it, so a reader sees where each rule lives and who stands behind it.</p>
+    <p>Institutions frequently state different rules for AI use across their own documents. A provost policy permits use by default while a school catalog prohibits it, or a teaching center tells instructors to cite an honor code with no mention of AI. The census treats these conflicts and absences as findings about how institutions govern, so the inventory records each contradiction on the document stating it, and the institution log records each integrity code or policy checked and found silent on AI.</p>
+  </section>
+
+  <section aria-labelledby="status">
+    <h2 id="status">Status</h2>
+    <p>The census releases in batches, each archived on Zenodo with its own DOI. The concept DOI above always resolves to the latest version.</p>
+    <div class="status">
+      <div class="stat"><b>0.4</b><span>current version, November 2026</span></div>
+      <div class="stat"><b>70</b><span>institutions searched of 334</span></div>
+      <div class="stat"><b>906</b><span>document rows</span></div>
+      <div class="stat"><b>607</b><span>rows verified</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="method">
+    <h2 id="method">Method and authorship</h2>
+    <p>Kirsti K. Cole, North Carolina State University, directs the census, which supplies the quantitative base for her book in progress, <em>The Glitch Curriculum</em>, under review with Johns Hopkins University Press. She designed the sampling frame, the four inclusion tests, and the search protocol, and her coding determines boundary cases. The interpretive coding and the readings on the Reading the census tab are hers, kept separate from the record.</p>
+  </section>
+
+  <section aria-labelledby="cite">
+    <h2 id="cite">Cite</h2>
+    <div class="cite">Cole, K. (2026). <em>AI Governance Census of US Colleges and Universities</em> (Version 0.4) [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.23901461">https://doi.org/10.5281/zenodo.23901461</a></div>
+    <p class="small">Data, documentation, and code are released under CC BY 4.0. Quoted passages remain the work of their issuing institutions.</p>
+  </section>
+
+  <section aria-labelledby="more">
+    <h2 id="more">Where to go</h2>
+    <ul class="links">
+      <li><a href="https://kkcole-gif.github.io/ai-governance-census/">The census site</a>: institutions, contradictions, the user guide, and the reading of the evidence</li>
+      <li><a href="https://doi.org/10.5281/zenodo.23887259">Zenodo archive</a>: every released version</li>
+      <li><a href="https://github.com/kkcole-gif/ai-governance-census">GitHub repository</a>: data files and the sampling-frame script</li>
+      <li><a href="mailto:kkcole2@ncsu.edu">kkcole2@ncsu.edu</a>: questions about the census</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <span><a href="/">Kirsti K. Cole, PhD</a></span>
+  <span>NC State University · Raleigh, NC</span>
+</footer>
+
+</body>
+</html>
